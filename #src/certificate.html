@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ua">
+@@include('_head.html',{
+"title":"Сертифікат"
+})
+
+<body>
+	<div class="wrapper">
+		<header class="header header_bg-1">
+			@@include('./components/_header.html',{})
+		</header>
+		<main class="page">
+			<section class="gas">
+				<div class="gas__top">
+					<div class="gas__container _container">
+						<h2 class="gas__title title-gas">Газовий конденсат. Аукціони</h2>
+						@@include('./components/_gas-nav.html',{
+						"webRoot":"http://andreyfront.owlweb.com.ua/unb/auction.html"
+						})
+					</div>
+				</div>
+				<div class="gas__body">
+					<div class="gas__container _container">
+						<div class="gas__breadcrumbs breadcrumbs"></div>
+						<div class="gas__downloads">
+							<div class="gas__download download">
+								<a href="img/gas-shop/dogovir.pdf" download="" class="download__link _icon-download"><span>Паспорт якості № 0601С</span></a>
+							</div>
+							<div class="gas__download download">
+								<a href="img/gas-shop/dogovir.pdf" download="" class="download__link _icon-download"><span>Паспорт якості № 1201 від 12.01.2022</span></a>
+							</div>
+							<div class="gas__download download">
+								<a href="img/gas-shop/dogovir.pdf" download="" class="download__link _icon-download"><span>Паспорт якості № 1201 від 12.01.2022</span></a>
+							</div>
+							<div class="gas__download download">
+								<a href="img/gas-shop/dogovir.pdf" download="" class="download__link _icon-download"><span>Паспорт якості № 0601С</span></a>
+							</div>
+							<div class="gas__download download">
+								<a href="img/gas-shop/dogovir.pdf" download="" class="download__link _icon-download"><span>Паспорт якості № 0601С</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			@@include('./components/_links-block.html',{})
+		</main>
+		@@include('./components/_footer.html',{})
+	</div>
+	@@include('_js.html',{})
+</body>
+
+</html>

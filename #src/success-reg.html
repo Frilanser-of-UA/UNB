@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ua">
+@@include('_head.html',{
+"title":"Success-reg"
+})
+
+<body>
+	<div class="wrapper">
+		<header class="header header_bg-2">
+			@@include('./components/_header-cabinet.html',{})
+		</header>
+		<main class="page">
+			<section class="page__success-reg-enter success-reg-enter">
+				<div class="success-reg-enter__container _container">
+					<div class="success-reg-enter__body">
+						<div class="success">
+							<div class="success__body">
+								<div class="success__icon _icon-check"></div>
+								<div class="success__label">Заявку на реєстрацію відправлено. </div>
+								<div class="success__text">
+									<p>Підтвердіть свою пошту example@gmail.com</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('./components/_footer.html',{})
+	</div>
+	@@include('_js.html',{})
+</body>
+
+</html>

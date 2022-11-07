@@ -1,0 +1,52 @@
+.title {
+	font-weight: 700;
+	font-size: 60px;
+	line-height: 119.5%;
+	text-transform: uppercase;
+
+	@media (max-width:($md2+px)) {
+		font-weight: 500;
+		font-size: 40px;
+	}
+
+	@media (max-width:($md4+px)) {
+		font-size: 30px;
+	}
+
+	&_white {
+		color: $bg-0;
+	}
+}
+
+.title-gas {
+	font-weight: 500;
+	font-size: 40px;
+	line-height: 120%;
+	text-transform: uppercase;
+
+	@media (max-width:($md4+px)) {
+		font-size: 30px;
+	}
+
+	// .title-shop_size
+
+	&_size {
+		font-size: 36px;
+	}
+
+	// .title-shop_size
+
+	&_color-text {
+		color: $bg-dark;
+		text-transform: none;
+
+		@media (max-width:($md4+px)) {
+			font-size: 40px;
+		}
+
+		@media (max-width:($md5+px)) {
+			font-weight: 400;
+			font-size: 30px;
+		}
+	}
+}

@@ -1,0 +1,37 @@
+.links {
+
+	// .links__link
+
+	&__link {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		padding: 30px 15px 30px 10px;
+		letter-spacing: -0.01em;
+		font-size: 24px;
+		color: $navyblue;
+		border-top: 1px solid $navyblue;
+		transition: background-color 0.3s ease-in-out 0s;
+
+		@media (any-hover:hover) {
+			&:hover {
+				background-color: $bg-0;
+
+				&::before {
+					transform: rotate(90deg) translateY(-10px);
+
+				}
+			}
+		}
+
+		&:last-child {
+			border-bottom: 1px solid $navyblue;
+		}
+
+		&::before {
+			transform: rotate(90deg);
+			transition: transform 0.3s ease-in-out 0s;
+			margin: 0px 0px 0px 20px;
+		}
+	}
+}

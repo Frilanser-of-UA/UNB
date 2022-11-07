@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ua">
+@@include('_head.html',{
+"title":"Callback"
+})
+
+<body>
+	<div class="wrapper">
+		<header class="header header_bg-2">
+			@@include('./components/_header-cabinet.html',{})
+		</header>
+		<main class="page">
+			<section class="page__gas gas">
+				<div class="gas__top">
+					<div class="gas__container _container">
+						<h2 class="gas__title title-gas">👋 Вітаємо, Михайло!</h2>
+						@@include('./components/_gas-nav-cab.html',{})
+					</div>
+				</div>
+				<div class="gas__body">
+					<div class="gas__container _container">
+						<div class="gas__data callback">
+							<div class="callback__left">
+								<h3 class="callback__title">Напишіть своє запитання </h3>
+								<form action="#" id="form-callback" class="callback__form form" method="POST" enctype="multipart/form-data" novalidate="novalidate">
+									<div class="form__body form__body_padding">
+										<div class="form__line">
+											<textarea id="message" class="form__input input input-textarea" type="message"></textarea>
+											<label class="form__label form__label_size" for="message">Уведіть ваше повідомлення</label>
+											<div class="form-blok" aria-hidden="true"></div>
+										</div>
+									</div>
+									<div class="form__row">
+										<button form="form-callback" class="form__button button"><span class="button__gradient"></span><span class="button__text button__text_height _icon-arrow"><span>відправити</span></span></button>
+									</div>
+								</form>
+								<div class="callback__success success">
+									<div class="success__body">
+										<div class="success__icon _icon-check"></div>
+										<div class="success__label">Відправлено</div>
+										<div class="success__text">
+											<p>Зв'яжемось з вами з приводу вашого запиту протягом найближчих годин в робочий час.</p>
+											<p>Розклад: Пн - Чт – 09:00-18:00, Пт – 09:00-16:45, Сб - Нд – Вихідні</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="callback__right right-contacts">
+								<div class="right-contacts__content">
+									<div class="right-contacts__item right-contacts__item_border-non">
+										<p>У разі Вашої зацікавленості у придбанні газу, залиште заявку на сайті. Ми зв'яжемося з Вами найближчим часом для узгодження всіх деталей.</p>
+										<p>Або зв’яжіться з:</p>
+									</div>
+									<div class="right-contacts__item">
+										<div class="right-contacts__label right-contacts__label_fz">Андрій Куйовда</div>
+										<div class="right-contacts__link-mail"><a href="mailto:example@unb.ua">example@unb.ua</a></div>
+									</div>
+									<div class="right-contacts__item">
+										<div class="right-contacts__label">Час роботи компанії:</div>
+										<ul class="right-contacts__sublist">
+											<li class="right-contacts__subitem">Пн - Чт – 09:00-18:00</li>
+											<li class="right-contacts__subitem">Пт – 09:00-16:45</li>
+											<li class="right-contacts__subitem">Сб - Нд – Вихідні</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('./components/_footer-reg.html',{})
+	</div>
+	@@include('_js.html',{})
+</body>
+
+</html>

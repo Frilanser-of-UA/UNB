@@ -1,0 +1,299 @@
+//====================================================================================================
+.footer {
+	background-color: $bg-3;
+	// .footer__container
+
+	&__container {}
+
+	// .footer__body
+
+	&__body {
+		display: flex;
+		padding: 50px 0px 45px 0;
+
+		@media (max-width:($md4+px)) {
+			display: block;
+		}
+	}
+
+	// .footer__logo
+
+	&__logo {
+		flex: 0 0 190px;
+		margin: 0px 50px 0px 0px;
+
+		@media (max-width:($md3+px)) {
+			margin: 0;
+			flex: 0 0 65px;
+		}
+
+		@media (max-width:($md4+px)) {
+			display: flex;
+			justify-content: center;
+			margin: 0px 0px 50px 0px;
+			flex: 0 0 72px;
+		}
+
+		img {
+			width: 65px;
+
+			@media (max-width:($md4+px)) {
+				width: 72px;
+			}
+		}
+	}
+
+	// .footer__right
+
+	&__right {
+		flex: 1 1 auto;
+		display: flex;
+
+		@media (max-width:($md2+px)) {
+			display: block;
+		}
+	}
+
+	&__items {
+		text-align: right;
+
+		@media (max-width:($md2+px)) {
+			margin: 20px 0px 20px 0px;
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+		}
+	}
+
+	// .footer__contacts
+
+	&__contacts {
+		flex: 1 1 auto;
+		display: flex;
+		margin: 0px 50px 0px 0px;
+
+		@media (max-width:($md2+px)) {
+			margin: 0px 42px 0px 0px;
+			justify-content: flex-end;
+		}
+
+		@media (max-width:($md4+px)) {
+			display: block;
+			margin: 0;
+		}
+	}
+
+	// .footer__list
+
+	&__list {
+		flex: 0 1 275px;
+		margin: 0px 50px 0px 0px;
+
+		@media (max-width:($md2+px)) {
+			margin: 0px 20px 0px 0px;
+		}
+
+		@media (max-width:($md4+px)) {
+			margin: 0;
+
+			&:not(:last-child) {
+				margin: 0px 0px 20px 0px;
+			}
+		}
+	}
+
+	// .footer__item
+
+	&__item {
+		display: flex;
+
+		&:not(:last-child) {
+			margin: 0px 0px 15px 0px;
+		}
+
+		@media (max-width:($md4+px)) {
+			justify-content: space-between;
+		}
+	}
+
+	// .footer__label
+
+	&__label {
+		flex: 0 1 80px;
+		margin: 0px 20px 0px 0px;
+		font-size: 14px;
+		line-height: 119.5%;
+
+		@media (max-width:($md4+px)) {
+			flex: 0 1 163px;
+			margin: 0px 10px 0px 0px;
+		}
+	}
+
+	// .footer__links
+
+	&__links {
+		flex: 0 1 175px;
+
+		@media (max-width:($md4+px)) {
+			flex: 0 0 163px;
+		}
+
+	}
+
+	&__tel {
+		margin: 0px 0px 10px 0px;
+	}
+
+	// .footer__link
+	&__link {
+		font-size: 14px;
+		line-height: 119.5%;
+		color: $navyblue;
+		padding: 0px 0px 5px 0px;
+		position: relative;
+
+		@media (any-hover:hover) {
+			&:hover {
+				&::before {
+					width: 100%;
+				}
+			}
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 1px;
+			height: 2px;
+			background-color: $navyblue;
+			transition: width 0.6s linear 0s;
+		}
+
+		&_dot {
+			&::before {
+				display: none;
+			}
+
+			@media (max-width:($md3+px)) {
+				font-size: 14px;
+			}
+		}
+	}
+
+
+	// .footer__list-text 
+
+	&__list-text {}
+
+
+
+	&__socium {
+		&:not(:last-child) {
+			margin: 0px 0px 17px 0px;
+
+			@media (max-width:($md2+px)) {
+				margin: 0px 17px 0px 0px;
+			}
+		}
+	}
+
+	// .footer__link-soc
+
+	&__link-soc {
+		line-height: 119.5%;
+		color: $navyblue;
+		position: relative;
+		padding: 0px 0px 5px 0px;
+
+		@media (any-hover:hover) {
+			&:hover {
+				&::before {
+					width: 1px;
+				}
+			}
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			width: 100%;
+			height: 2px;
+			background-color: $navyblue;
+			transition: width 0.6s linear 0s;
+		}
+	}
+
+	// .footer__bottom
+
+	&__bottom {
+		background-color: $navyblue;
+		padding: 8px 0;
+	}
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	// .footer__text
+
+	&__text {
+		font-size: 14px;
+		line-height: 119.5%;
+		color: $gray-01;
+		display: inline-flex;
+		align-items: center;
+
+		span {
+			font-size: 32px;
+			margin: 0px 0px 0px 5px;
+		}
+	}
+}
+
+.list-text {
+
+	// .list-text__item
+
+	&__item {
+		margin: 0px 0px 20px 0px;
+	}
+
+	// .list-text__link
+
+	&__link {
+		position: relative;
+		line-height: 119.5%;
+		color: $navyblue;
+		padding: 0px 0px 5px 0px;
+		font-size: 14px;
+
+		@media (any-hover:hover) {
+			&:hover {
+				&::before {
+					width: 100%;
+				}
+			}
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 1px;
+			height: 2px;
+			background-color: $navyblue;
+			transition: all 0.6s linear 0s;
+		}
+	}
+}
+
+
+//====================================================================================================

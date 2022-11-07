@@ -1,0 +1,198 @@
+.gas {
+	background-color: $white;
+	// .gas__top
+
+	&__top {
+		background-color: $bg-1;
+		padding: 100px 0px 0px 0px;
+	}
+
+	// .gas__container
+
+	&__container {}
+
+	// .gas__title
+
+	&__title {
+		margin: 0px 0px 30px 0px;
+	}
+
+	// .gas__nav
+
+	&__nav {}
+
+	// .gas__body
+
+	&__body {
+		padding: 0px 0px 100px 0px;
+
+		@media (max-width:($md2+px)) {
+			padding: 0px 0px 80px 0px;
+		}
+	}
+
+	// .gas__breadcrumbs
+
+	&__breadcrumbs {}
+
+	// .gas__items
+
+	&__items {
+		padding: 30px 0px 0px 0px;
+	}
+
+	&__downloads {
+		padding: 30px 0px 0px 0px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 20px 45px;
+
+		@media (max-width:($md3+px)) {
+			gap: 20px;
+		}
+
+		@media (max-width:($md4+px)) {
+			grid-template-columns: 100%;
+		}
+	}
+
+	&__download {
+
+		@media (max-width:($md2+px)) {
+			&:nth-child(n+5) {
+				grid-column: 1/span 2;
+			}
+		}
+
+		@media (max-width:($md4+px)) {
+			&:nth-child(n+5) {
+				grid-column: auto;
+			}
+		}
+
+	}
+
+	&__item {}
+
+	&__table-box {
+		padding: 30px 0px 0px 0px;
+	}
+
+	// .gas__table
+
+	&__table {}
+
+	// .gas__rules
+
+	&__rules {}
+
+	&__data {}
+
+	&__data {}
+
+}
+
+.data {
+	padding: 50px 0;
+	display: flex;
+
+	@media (max-width:($md2+px)) {
+		display: block;
+	}
+
+	&__left {
+		margin: 0px 50px 0px 0px;
+		flex: 0 1 510px;
+
+		@media (max-width:($md2+px)) {
+			margin: 0px 0px 70px 0px;
+		}
+	}
+
+	&__label {
+		font-size: 20px;
+		line-height: 140%;
+		color: $gray-02;
+		padding: 0px 0px 20px 0px;
+	}
+
+	&__row {
+		&:not(:last-child) {
+			margin: 0px 0px 30px 0px;
+		}
+	}
+
+	&__sublabel {
+		line-height: 120%;
+		margin: 0px 0px 13px 0px;
+	}
+
+	&__info-text {
+		font-size: 24px;
+		line-height: 120%;
+		display: flex;
+	}
+
+	&__link {
+		margin: 0px 0px 0px 12px;
+		font-size: 24px;
+		color: $navyblue;
+
+	}
+
+	&__right {
+		flex: 0 1 510px;
+	}
+}
+
+.callback {
+	display: flex;
+	justify-content: space-between;
+	padding: 50px 0;
+
+	@media (max-width:($md2+px)) {
+		display: block;
+	}
+
+	&__left {
+		flex: 0 1 636px;
+		margin: 0px 50px 0px 0px;
+
+		@media (max-width:($md2+px)) {
+			margin: 0px 0px 50px 0px;
+		}
+	}
+
+	&__title {
+		font-weight: 500;
+		font-size: 32px;
+		line-height: 120%;
+		margin: 0px 0px 65px 0px;
+	}
+
+	&__form {
+		&.not-visible {
+			display: none;
+		}
+	}
+
+	&__right {
+		flex: 0 1 294px;
+
+		@media (max-width:($md2+px)) {
+			width: 100%;
+		}
+	}
+
+	.right-contacts__item {
+		border-top-width: 2px;
+	}
+
+	&__success {
+		display: none;
+
+		&.visible {
+			display: block;
+		}
+	}
+}

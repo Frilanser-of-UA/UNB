@@ -1,0 +1,30 @@
+//====================================================================================================
+@import "./components/company";
+@import "./components/about";
+@import "./components/geology";
+@import "./components/responsibility";
+@import "./components/suppliers";
+@import "./components/news";
+
+.page {
+
+	&__img-bg {
+		height: 560px;
+		background: url('../img/home/img-full-screen.jpg') center/cover no-repeat;
+
+		&_bg-2 {
+			background: url('../img/home/img-full-screen-2.jpg') center/cover no-repeat;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+//====================================================================================================

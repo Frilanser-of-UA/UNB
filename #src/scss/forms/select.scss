@@ -1,0 +1,203 @@
+//<SELECT (sel+tab)>====================================================================================================
+.header {
+	.select {
+		position: relative;
+		border-radius: 50%;
+
+		// .select__item
+		&__item {
+			position: relative;
+			z-index: 2;
+			border-radius: 50%;
+		}
+
+		// .select__title
+		&__title {
+			color: $gray-03;
+			cursor: pointer;
+			font-size: 13px;
+			font-weight: 500;
+			border-radius: 50%;
+			position: relative;
+			background-color: $white;
+			z-index: 2;
+			overflow: hidden;
+			transition: color 0.3s ease-in-out 0s, background-color 0.3s ease-in-out 0s;
+
+
+			@media (any-hover:hover) {
+				&:hover {
+					background-color: $bg-dark;
+				}
+			}
+		}
+
+		// .select__value
+		&__value {
+			display: flex;
+			font-size: 13px;
+			height: 44px;
+			width: 44px;
+			align-items: center;
+			justify-content: center;
+			font-weight: 500;
+			border-radius: 50%;
+
+
+			span {
+				overflow: hidden;
+				display: -webkit-box;
+				-webkit-line-clamp: 1;
+				-webkit-box-orient: vertical;
+			}
+		}
+
+		&__input {
+			width: 100%;
+			background-color: transparent;
+			height: 100%;
+		}
+
+		// .select__options
+		&__options {
+			color: $bg-0;
+			position: absolute;
+			top: 22px;
+			min-width: 100%;
+			left: 0;
+			background-color: $bg-dark;
+			font-size: 14px;
+			padding: 20px 0px 5px 0px;
+			border-radius: 0px 0px 72px 72px / 0px 0px 72px 72px;
+		}
+
+		// .select__option
+		&__option {
+			cursor: pointer;
+			margin: 0px 0px 0px 0px;
+			text-align: center;
+			padding: 11px 0;
+			border-radius: 50%;
+		}
+
+		&._active {
+			z-index: 5;
+
+			.select__title {
+				background-color: $bg-dark;
+				color: $bg-0;
+			}
+
+			.select__options {
+				display: block;
+			}
+		}
+	}
+}
+
+// .select {
+// 	position: relative;
+
+// 	// .select__item
+// 	&__item {
+// 		position: relative;
+// 	}
+
+// 	// .select__title
+// 	&__title {
+// 		color: #000;
+// 		border: 1px solid #d9d9d9;
+// 		background-color: #fff;
+// 		cursor: pointer;
+// 		border-radius: 4px;
+
+// 		@media (max-width: ($md2+px)) {
+// 			font-size: 18px;
+// 		}
+// 	}
+
+// 	// .select__value
+// 	&__value {
+// 		display: flex;
+// 		font-size: 14px;
+// 		height: 30px;
+// 		padding: 0px 15px;
+// 		align-items: center;
+// 		justify-content: space-between;
+// 		flex-direction: row-reverse;
+
+// 		span {
+// 			height: 1em;
+// 			overflow: hidden;
+// 			display: -webkit-box;
+// 			-webkit-line-clamp: 1;
+// 			-webkit-box-orient: vertical;
+// 		}
+
+// 		&:before {
+// 			content: "";
+// 			display: inline-block;
+// 			transition: all 0.3s ease 0s;
+// 			width: 11px;
+// 			height: 7px;
+// 			background: url("../img/icons/select.svg") center / 100% no-repeat;
+// 		}
+// 	}
+
+// 	&__input {
+// 		width: 100%;
+// 		background-color: transparent;
+// 		height: 100%;
+// 	}
+
+// 	// .select__options
+// 	&__options {
+// 		color: #000;
+// 		position: absolute;
+// 		top: 29px;
+// 		border-radius: 0 0 4px 4px;
+// 		min-width: 100%;
+// 		left: 0;
+// 		background-color: #fff;
+// 		border-top: 0;
+// 		border: 1px solid #d9d9d9;
+// 		border-top: 0;
+// 		font-size: 14px;
+// 		padding: 10px 0px 5px 0px;
+
+// 		@media (max-width: $md2+px) {
+// 			font-size: 18px;
+// 		}
+// 	}
+
+// 	// .select__option
+// 	&__option {
+// 		cursor: pointer;
+// 		padding: 5px 15px;
+// 		margin: 0px 0px 0px 0px;
+
+// 		@media (min-width: 992px) {
+// 			&:hover {
+// 				background: #d9d9d9;
+// 			}
+// 		}
+// 	}
+
+// 	&._active {
+// 		z-index: 5;
+
+// 		.select__value {
+// 			&:before {
+// 				transform: rotate(-180deg);
+// 			}
+// 		}
+
+// 		.select__options {
+// 			display: block;
+// 		}
+// 	}
+// }
+
+
+
+//</SELECT>====================================================================================================

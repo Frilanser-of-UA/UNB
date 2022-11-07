@@ -1,0 +1,422 @@
+.item-gas {
+	background-color: $bg-00;
+	display: flex;
+	border-bottom: 2px solid $bg-3;
+	margin: 0px 0px 45px 0px;
+
+	@media (max-width:($md3+px)) {
+		display: block;
+		border: 2px solid $bg-3;
+	}
+
+	// .item-gas__right
+
+	&__left {
+		padding: 30px 0px 0px 0px;
+		flex: 0 1 700px;
+		max-width: calc((700/1100)*100%);
+		border-right: 2px solid $bg-3;
+		display: flex;
+		flex-direction: column;
+
+		@media (max-width:($md3+px)) {
+			border: none;
+			max-width: 100%;
+		}
+	}
+
+	// .item-gas__subtitle
+
+	&__subtitle {
+		font-size: 40px;
+		line-height: 120%;
+		color: $bg-dark;
+		margin: 0px 0px 20px 25px;
+
+		@media (max-width:($md3+px)) {
+			font-size: 30px;
+		}
+	}
+
+	// .item-gas__content
+
+	&__content {
+		transition: max-height 0.3s ease-out;
+		display: flex;
+		flex-direction: column;
+		flex: 1 1 auto;
+	}
+
+	&__run-text {}
+
+	// .item-gas__show
+
+	&__show {
+		border-bottom: 2px solid $bg-3;
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.3s ease-out;
+
+		@media (max-width:($md3+px)) {
+			border: none;
+			margin: 0px 0px 15px 0px;
+		}
+	}
+
+	// .item-gas__item
+
+	&__item {
+		padding: 10px 30px;
+		display: flex;
+		transition: background-color 0.3s ease-out 0s;
+
+		@media (any-hover:hover) {
+			&:hover {
+				background-color: $bg-1;
+			}
+		}
+
+		@media (max-width:($md4+px)) {
+			padding: 10px;
+		}
+
+		@media (max-width: 414px) {
+			display: block;
+			padding: 15px 10px;
+		}
+	}
+
+	// .item-gas__label
+
+	&__label {
+		flex: 0 1 240px;
+		line-height: 120%;
+		margin: 0px 30px 0px 0px;
+
+		@media (max-width:($md3+px)) {
+			flex: 0 1 50%;
+		}
+
+		@media (max-width:($md4+px)) {
+			font-size: 14px;
+			margin: 0;
+		}
+
+		@media (max-width: 413.98px) {
+			margin: 0px 0px 10px 0px;
+		}
+
+	}
+
+	// .item-gas__text
+
+	&__index {
+		flex: 0 1 370px;
+		line-height: 120%;
+		font-size: 18px;
+
+		@media (max-width:($md3+px)) {
+			flex: 0 1 50%;
+		}
+
+		@media (max-width:($md4+px)) {
+			font-size: 16px;
+		}
+	}
+
+	// .item-gas__button
+	&__visible {
+		flex: 1 1 auto;
+	}
+
+	&__button {
+		display: flex;
+		flex-direction: row-reverse;
+		padding: 0 25px;
+		text-align: right;
+		width: 100%;
+		align-items: center;
+		min-height: 54px;
+		transition: background-color 0.3s ease-out 0s;
+		font-size: 14px;
+		margin-top: auto;
+
+		@media (any-hover:hover) {
+			&:hover {
+				background-color: $bg-1;
+			}
+		}
+
+		&::before {
+			color: $gray-03;
+			font-size: 24px;
+			width: 24px;
+			height: 24px;
+			margin: 0px 0px 3px 0px;
+			transition: transform 0.3s ease-in-out 0s, color 0.3s ease-in-out 0s;
+		}
+
+		span {
+			margin: 0px 10px 0px 0px;
+
+			&:last-child {
+				display: none;
+			}
+		}
+
+		&._active {
+
+			&::before {
+				transform: matrix(1, 0, 0, -1, 0, 0);
+				color: $navyblue;
+			}
+
+			span {
+				&:last-child {
+					display: block;
+				}
+
+				&:first-child {
+					display: none;
+				}
+			}
+		}
+	}
+
+	// .item-gas__left
+
+	&__right {
+		padding: 25px;
+		flex: 0 1 400px;
+		text-align: right;
+
+		&_padding {
+			@media (max-width:($md4+px)) {
+				padding: 25px 10px;
+			}
+		}
+	}
+
+	// .item-gas__text
+
+	&__text {
+		line-height: 120%;
+		font-size: 18px;
+		text-align: left;
+	}
+
+	// .item-gas__btn
+
+	&__btn {
+		margin: 30px 0px 0px auto;
+
+	}
+
+	// .item-gas__subitem
+
+	&__subitem {}
+}
+
+.subitem-gas {
+
+	&__link {
+		width: 100%;
+		border-radius: 14px;
+		overflow: hidden;
+		border: 1px solid $white;
+		display: block;
+		color: $navyblue;
+
+		&_border {
+			border-left: none;
+			border-radius: 0px 19px 19px 0px;
+
+			@media (max-width:($md4+px)) {
+				border-radius: 0px 0px 19px 19px;
+			}
+		}
+
+		&._hover {
+			@media (any-hover:hover) {
+				&:hover {
+					.subitem-gas__content {
+						background-color: $bg-1;
+					}
+
+					.subitem-gas__btn {
+						background-color: $bg-1;
+						padding: 26px 20px;
+					}
+				}
+			}
+		}
+
+		&:disabled {
+			cursor: auto;
+
+			.subitem-gas__content {
+				background-color: $bg-1;
+			}
+
+			.subitem-gas__btn {
+				background-color: $bg-1;
+
+				&_display {
+					span {
+						&:first-child {
+							display: none;
+						}
+
+						&:last-child {
+							display: flex;
+						}
+					}
+
+				}
+			}
+
+		}
+	}
+
+	// .subitem-gas__content
+
+	&__content {
+		padding: 20px 30px;
+		background-color: $bg-2;
+		border-bottom: 2px solid $white;
+		transition: background-color 0.3s ease-in-out 0s;
+		text-align: left;
+
+		@media (max-width:($md2+px)) {
+			padding: 20px;
+			text-align: center;
+		}
+
+		&_border {
+			border-bottom: 1px solid $white;
+		}
+
+
+	}
+
+	// .subitem-gas__timer
+
+	&__timer {}
+
+	// .subitem-gas__time
+
+	&__time {
+		font-size: 22px;
+		line-height: 138%;
+		margin: 0px 0px 7px 0px;
+		white-space: nowrap;
+
+		@media (max-width:($md2+px)) {
+			white-space: normal;
+			font-size: 24px;
+		}
+	}
+
+	// .subitem-gas__label
+
+	&__label {
+		font-size: 14px;
+		line-height: 120%;
+	}
+
+	// .subitem-gas__btn
+
+	&__btn {
+		font-weight: 500;
+		font-size: 13px;
+		line-height: 110%;
+		color: $navyblue;
+		text-transform: uppercase;
+		background-color: $bg-2;
+		width: 100%;
+		transition: background-color 0.3s ease-in-out 0s, padding 0.3s ease-in-out 0s;
+		padding: 26px 25px;
+
+		@media (max-width:($md2+px)) {
+			padding: 35px 20px 20px 20px;
+		}
+
+		span {
+			display: flex;
+			flex-direction: row-reverse;
+			justify-content: space-between;
+			align-items: center;
+
+			&::before {
+				transform: rotate(90deg);
+				font-size: 24px;
+				height: 24px;
+				margin: 0px 0px 4px 15px;
+
+				@media (max-width:($md2+px)) {
+					margin: 15px 0 0 0;
+				}
+			}
+
+			@media (max-width:($md2+px)) {
+				flex-direction: column-reverse;
+			}
+
+		}
+
+		&_display {
+			span {
+				&::before {
+					transform: rotate(0);
+				}
+
+				&:last-child {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+.marquee {
+	padding: 0px 0px 20px 0px;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+
+	p {
+		background-color: $bg-3;
+		white-space: nowrap;
+		line-height: 120%;
+		font-size: 16px;
+		color: $blue;
+
+	}
+}
+
+.timer {
+	display: flex;
+	font-size: 26px;
+	line-height: 130%;
+	margin: 0px 0px 7px 0px;
+
+	&__item {
+		&:first-child {
+			margin: 0px 5px 0px 0px;
+		}
+	}
+
+	@media (max-width:($md2+px)) {
+		justify-content: center;
+	}
+
+	&_fire {
+		.timer__item {
+			&:first-child {
+				display: none;
+			}
+		}
+	}
+}

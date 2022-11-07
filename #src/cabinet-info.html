@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ua">
+@@include('_head.html',{
+"title":"Cabinet-info"
+})
+
+<body>
+	<div class="wrapper">
+		<header class="header header_bg-2">
+			@@include('./components/_header-cabinet.html',{})
+		</header>
+		<main class="page">
+			<section class="page__gas gas">
+				<div class="gas__top">
+					<div class="gas__container _container">
+						<h2 class="gas__title title-gas">👋 Вітаємо, Михайло!</h2>
+						@@include('./components/_gas-nav-cab.html',{})
+					</div>
+				</div>
+				<div class="gas__body">
+					<div class="gas__container _container">
+						<div class="gas__data data">
+							<div class="data__left">
+								<div class="data__row">
+									<div class="data__label">Дані користувача</div>
+								</div>
+								<div class="data__row">
+									<div class="data__sublabel">ПІП користувача</div>
+									<div class="data__info-text">Зюбенко Михайло Георгійович <a href="#" class="data__link _icon-edit"></a></div>
+								</div>
+								<div class="data__row">
+									<div class="data__sublabel">Email</div>
+									<div class="data__info-text">example@gmail.com <a href="#" class="data__link _icon-edit"></a></div>
+								</div>
+								<div class="data__row">
+									<div class="data__sublabel">Телефон</div>
+									<div class="data__info-text">+38 050 000 00 00 <a href="#" class="data__link _icon-edit"></a></div>
+								</div>
+								<div class="data__row">
+									<div class="data__sublabel">Пароль</div>
+									<div class="data__info-text">******** <a href="#" class="data__link _icon-edit"></a></div>
+								</div>
+							</div>
+							<div class="data__right">
+								<div class="data__row">
+									<div class="data__label">Дані про підприємство</div>
+								</div>
+								<div class="data__row">
+									<div class="data__sublabel">Офіційна скорочена назва</div>
+									<div class="data__info-text">ФОП OwlWeb Team<a href="#" class="data__link _icon-edit"></a></div>
+								</div>
+								<div class="data__row">
+									<div class="data__sublabel">Код ЄДРПОУ</div>
+									<div class="data__info-text">14360570<a href="#" class="data__link _icon-edit"></a></div>
+								</div>
+								<div class="data__row">
+									<div class="data__sublabel">IBAN</div>
+									<div class="data__info-text">UA173000010000032003102901026<a href="#" class="data__link _icon-edit"></a></div>
+								</div>
+								<div class="data__row">
+									<div class="data__sublabel">Пароль</div>
+									<div class="data__info-text">******** <a href="#" class="data__link _icon-edit"></a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('./components/_footer-reg.html',{})
+	</div>
+	@@include('_js.html',{})
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ua">
+@@include('_head.html',{
+"title":"Аукціон не користувач"
+})
+
+<body>
+	<div class="wrapper">
+		<header class="header header_bg-1">
+			@@include('./components/_header.html',{})
+		</header>
+		<main class="page">
+			<section class="page__gas gas">
+				<div class="gas__top">
+					<div class="gas__container _container">
+						<h2 class="gas__title title-gas">Газовий конденсат. Аукціони</h2>
+						@@include('./components/_gas-nav.html',{
+						"webRoot":"http://andreyfront.owlweb.com.ua/unb/auction-notuser.html"
+						})
+					</div>
+				</div>
+				<div class="gas__body">
+					<div class="gas__container _container">
+						<div class="gas__breadcrumbs breadcrumbs"></div>
+						<div class="auction-user">
+							<div class="auction-user__container">
+								<div class="auction-user__left">
+									<div class="auction-user__price price">
+										<div class="price__body">
+											<div class="price__pricelabel price__pricelabel_bg-color">
+												<div class="price__wrapper">
+													<div class="price__row">
+														<div class="price__volume" data-price="35000">40000</div>
+														<div class="price__item">
+															<div class="price__tooltip tooltip_position tooltip">
+																<div class="tooltip__icon _icon-warning"></div>
+																<div class="tooltip__body  tooltip__body_position">
+																	<p>🔥Щоб підвищіти шанси на перемогу, вкажіть бажаний обсяг та запропонуйте свою ціну</p>
+																</div>
+															</div>
+															<span class="price__metrics">грн/т</span>
+														</div>
+													</div>
+													<div class="price__label _icon-arrow-2">
+														<span>Стартова ціна</span>
+														<span>Ціна впала</span>
+														<span>Ціна виросла</span>
+													</div>
+												</div>
+											</div>
+											<div class="price__buttons">
+												<div class="price__button price__button_bg-color">
+													<a href="http://andreyfront.owlweb.com.ua/unb/registration.html"><span class="_icon-arrow">Зареєструватись</span></a>
+												</div>
+												<div class="price__button price__button_bg-color">
+													<a href="http://andreyfront.owlweb.com.ua/unb/enter.html"><span class="_icon-arrow">Увійти</span></a>
+												</div>
+											</div>
+										</div>
+										<div class="price__message">
+											<p>🔥Тільки зареєстровані та авторизовані користувачі можуть приймати участь в аукціонах</p>
+										</div>
+									</div>
+									@@include('./components/_links.html',{})
+								</div>
+								<div class="auction-user__right">
+									<div class="auction-user__info info" data-da=".auction-user__left,1024,1">
+										<div class="info__top" data-da=".auction-user__left,1024,0">
+											<div class="info__label">Проходить прямо зараз</div>
+											<div data-date="2022/07/03 20:06:00" class="info__timer timer timer_fire"></div>
+										</div>
+										<div class="info__sublabel">Xарактеристики лоту:</div>
+										<div class="info__content">
+											<div class="info__visible">
+												<div class="info__item">
+													<div class="info__sublabel">Стартова ціна:</div>
+													<div class="info__index">20 900 грн/т</div>
+												</div>
+												<div class="info__item">
+													<div class="info__sublabel">Условия оплаты:</div>
+													<div class="info__index">100% предварительная оплата</div>
+												</div>
+												<div class="info__item">
+													<div class="info__sublabel">Период оплаты:</div>
+													<div class="info__index">с 20.01.2022 по 21.01.2022 </div>
+												</div>
+												<div class="info__item">
+													<div class="info__sublabel">Период вывоза:</div>
+													<div class="info__index">с 20.01.2022 по 23.01.2022 </div>
+												</div>
+											</div>
+											<div class="info__show">
+												<div class="info__item">
+													<div class="info__sublabel">Стартова ціна:</div>
+													<div class="info__index">20 900 грн/т</div>
+												</div>
+												<div class="info__item">
+													<div class="info__sublabel">Условия оплаты:</div>
+													<div class="info__index">100% предварительная оплата</div>
+												</div>
+												<div class="info__item">
+													<div class="info__sublabel">Период оплаты:</div>
+													<div class="info__index">с 20.01.2022 по 21.01.2022 </div>
+												</div>
+												<div class="info__item">
+													<div class="info__sublabel">Период вывоза:</div>
+													<div class="info__index">с 20.01.2022 по 23.01.2022 </div>
+												</div>
+											</div>
+											<button class="info__button _icon-triangle _show"><span>Показати більше</span><span>Згорнути</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			@@include('./components/_links-block.html',{})
+		</main>
+		@@include('./components/_footer.html',{})
+	</div>
+	@@include('./components/_popup.html',{})
+	@@include('_js.html',{})
+</body>
+
+</html>

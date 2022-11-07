@@ -1,0 +1,172 @@
+.superiority {
+	background-color: $white;
+	padding: 100px 0;
+
+	@media (max-width:($md2+px)) {
+		padding: 80px 0;
+	}
+
+	// .superiority__container
+
+	&__container {}
+
+	// .superiority__title
+
+	&__title {
+		margin: 0px 0px 50px 0px;
+	}
+
+	// .superiority__body
+
+	&__body {
+		display: flex;
+
+		@media (max-width:($md3+px)) {
+			display: block;
+		}
+	}
+
+	// .superiority__righr
+
+	&__left {
+		flex: 0 1 700px;
+		margin: 0px 100px 0px 0px;
+
+		@media (max-width:($md2+px)) {
+			margin: 0px 50px 0px 0px;
+		}
+
+		@media (max-width:($md3+px)) {
+			margin: 0;
+		}
+	}
+
+	// .superiority__list
+
+	&__list {}
+
+	// .superiority__item
+
+	&__item {
+		padding: 20px 0 35px 77px;
+		border-top: 1px solid $navyblue;
+
+		@media (max-width:($md4+px)) {
+			padding: 20px 0 35px 0px;
+		}
+
+		&_padding {
+			padding: 30px 0 30px 0;
+		}
+	}
+
+	// .superiority__suttitle
+
+	&__suttitle {
+		font-size: 30px;
+		line-height: 120%;
+		color: $bg-dark;
+		margin: 0px 0px 20px 0px;
+		position: relative;
+
+		span {
+			color: $blue-new;
+			background-color: $bg-2;
+			width: 42px;
+			height: 42px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+			position: absolute;
+			left: -77px;
+			top: 50%;
+			transform: translateY(-50%);
+
+			@media (max-width:($md4+px)) {
+				display: none;
+			}
+		}
+	}
+
+	// .superiority__text
+
+	&__text {
+		font-size: 18px;
+		line-height: 120%;
+	}
+
+	// .superiority__sublist
+
+	&__sublist {
+		margin: 15px 0px 0px 0px;
+	}
+
+	// .superiority__subitem
+
+	&__subitem {
+		padding: 0px 0px 0px 47px;
+
+		&:not(:last-child) {
+			margin: 0px 0px 15px 0px;
+		}
+	}
+
+	// .superiority__subtext
+
+	&__subtext {
+		font-size: 18px;
+		line-height: 120%;
+		position: relative;
+
+		&::before {
+			content: '';
+			width: 32px;
+			height: 2px;
+			position: absolute;
+			background-color: $navyblue;
+			top: 50%;
+			left: -47px;
+			transform: translateY(-50%);
+		}
+	}
+
+	// .superiority__links
+
+	&__links {
+		margin: 40px 0px 0px -47px;
+		display: flex;
+		// flex-wrap: wrap;
+	}
+
+	// .superiority__link
+
+	&__link {
+		flex: 0 1 73px;
+
+		&:not(:last-child) {
+			margin: 0px 13px 0px 0px;
+		}
+
+		img {
+			width: 100%;
+		}
+
+	}
+
+	// .superiority__left
+
+	&__right {
+		flex: 0 0 300px;
+
+		@media (max-width:($md2+px)) {
+			flex: 0 0 275px;
+		}
+	}
+
+	// .superiority__download
+
+	&__download {
+		margin: 20px 0px 0px 0px;
+	}
+}

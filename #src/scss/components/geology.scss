@@ -1,0 +1,120 @@
+.geology {
+	padding: 100px 0;
+	background-color: $bg-0;
+
+	@media (max-width:($md2+px)) {
+		padding: 80px 0;
+	}
+
+	// .geology__container
+
+	&__container {}
+
+	// .geology__body
+
+	&__body {}
+
+	// .geology__title
+
+	&__title {
+		margin: 0px 0px 50px 0px;
+	}
+
+	// .geology__content
+
+	&__content {
+		display: flex;
+		height: 100%;
+
+		@media (max-width:($md4+px)) {
+			display: block;
+		}
+	}
+
+	// .geology__left
+
+	&__left {
+		flex: 0 1 300px;
+		margin-right: 100px;
+
+		@media (max-width:($md2+px)) {
+			margin-right: 50px;
+		}
+
+		@media (max-width:($md3+px)) {
+			margin-right: 20px;
+		}
+
+		@media (max-width:($md4+px)) {
+			margin-right: 0px;
+		}
+
+	}
+
+	// .geology__img
+
+	&__img {
+		height: 100%; //картинка подстроится под висоту текста
+
+		// padding: 0px 0px 172% 0px; // картинка по висоте в макете
+		@media (max-width:($md4+px)) {
+			padding: 0px 0px 98% 0px;
+			margin: 0px 0px 20px 0px;
+		}
+	}
+
+	// .geology__right
+
+	&__right {
+		flex: 0 1 700px;
+		text-align: right;
+	}
+
+	// .geology__label
+
+	&__label {
+		font-weight: 500;
+		font-size: 40px;
+		line-height: 120%;
+		margin: 0px 0px 40px 0px;
+		padding: 20px 0px 0px 0px;
+		text-align: left;
+		color: $bg-dark;
+
+		@media (max-width:($md2+px)) {
+			font-size: 30px;
+			font-weight: 400;
+		}
+	}
+
+	// .geology__wrapper-text
+
+	&__wrapper-text {
+		margin: 0px 0px 35px 0px;
+		text-align: left;
+	}
+
+	// .geology__text
+
+	&__text {
+		font-size: 22px;
+		line-height: 138%;
+
+		&:not(:last-child) {
+			margin: 0px 0px 20px 0px;
+
+			@media (max-width:($md2+px)) {
+				margin: 0px 0px 15px 0px;
+			}
+		}
+
+		@media (max-width:($md2+px)) {
+			font-size: 20px;
+			line-height: 140%;
+		}
+	}
+
+	// .geology__link
+
+	&__link {}
+}

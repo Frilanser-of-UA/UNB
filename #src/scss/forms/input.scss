@@ -1,0 +1,92 @@
+//INPUT (inp+tab)>====================================================================================================input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.input {
+	border-radius: 0 !important;
+	width: 100%;
+	display: block;
+	font-size: 20px;
+	line-height: 140%;
+	border-bottom: 1px solid $gray-01;
+	outline: none;
+	background-color: transparent;
+	cursor: pointer;
+	transition: border-color 0.3s ease 0s;
+	padding: 0px 0px 1px 0px;
+
+	&::placeholder {
+		color: #A9BDCE;
+		font-size: 20px;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.3s ease-in-out 0s;
+
+	}
+
+	@media (any-hover:hover) {
+		&:hover {
+			border-bottom: 1px solid $navyblue;
+		}
+	}
+
+	&._error {
+		border-bottom: 1px solid $red-02;
+
+		@media (any-hover:hover) {
+			&:hover {
+				border-bottom: 1px solid $red-03;
+			}
+		}
+
+		&~.form__label {
+			color: $red-03;
+
+		}
+	}
+}
+
+input[type="password"] {
+	padding: 0px 30px 1px 0px;
+}
+
+.input-textarea {
+	height: 46px;
+	width: 100%;
+	box-sizing: border-box;
+	font-size: 22px;
+	line-height: 138%;
+	background-color: transparent;
+	word-break: break-all;
+	overflow: hidden;
+	padding: 8px 0;
+}
+
+.form-blok {
+	height: 46px;
+	height: auto;
+	min-height: 46px;
+	font-size: 22px;
+	line-height: 138%;
+	width: 100%;
+	padding: 8px 0;
+	border-bottom: 1px solid $gray-01;
+	background-color: transparent;
+	word-break: break-all;
+	position: absolute;
+	left: 0;
+	right: 0;
+	z-index: -999;
+	visibility: hidden;
+}
+
+//</INPUT>====================================================================================================

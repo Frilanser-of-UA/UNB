@@ -1,0 +1,9 @@
+.text {
+	font-weight: 400;
+	font-size: 26px;
+	line-height: 138%;
+
+	@media (max-width:($md2+px)) {
+		font-size: 20px;
+	}
+}

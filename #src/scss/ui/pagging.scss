@@ -1,0 +1,89 @@
+.pagging {
+	display: flex;
+	align-items: center;
+	justify-content: end;
+
+	// .pagging__arrow
+	&__arrow {
+		flex: 0 0 37px;
+		width: 37px;
+		height: 37px;
+		color: $gray-01;
+		font-size: 24px;
+		transform: rotate(90deg);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&:last-child {
+			transform: rotate(-90deg);
+			color: $gray-03;
+			transition: background-color 0.3s ease-in-out 0s, color 0.3s ease-in-out 0s;
+		}
+
+		&._active {
+			@media (any-hover:hover) {
+				&:hover {
+					background-color: $bg-1;
+					color: $navyblue;
+				}
+			}
+		}
+	}
+
+	// .pagging__list
+	&__list {
+		display: flex;
+		flex: 0 0 auto;
+
+		li {
+			flex: 0 0 37px;
+			height: 37px;
+			width: 37px;
+			background-color: $white;
+			align-items: center;
+			justify-content: center;
+			display: inline-flex;
+			transition: background-color 0.3s ease-in-out 0s;
+
+			@media (any-hover:hover) {
+				&:hover {
+					background-color: $bg-1;
+				}
+			}
+		}
+	}
+
+	// .pagging__item
+	&__item {
+		font-size: 14px;
+		line-height: 120%;
+		color: $navyblue;
+		width: auto;
+		height: 100%;
+		padding: 0 5px;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+
+		&::before {
+			content: '';
+			height: 3px;
+			background-color: $bg-5;
+			position: absolute;
+			width: 1px;
+			bottom: 3px;
+			left: 50%;
+			transition: width 0.3s linear 0s;
+			transform: translateX(-50%);
+		}
+
+		&._active {
+			&::before {
+				width: 100%;
+			}
+		}
+	}
+}

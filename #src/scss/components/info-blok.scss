@@ -1,0 +1,48 @@
+.info-blok {
+	padding: 100px 0px;
+
+	@media (max-width:($md2+px)) {
+		padding: 80px 0px;
+	}
+
+	// .info__container
+
+	&__container {}
+
+	// .info__title
+
+	&__title {
+		font-weight: 500;
+		font-size: 36px;
+		line-height: 120%;
+		text-transform: uppercase;
+		margin: 0px 0px 30px 0px;
+
+		@media (max-width:($md4+px)) {
+			font-size: 30px;
+		}
+	}
+
+	// .info__body
+
+	&__body {
+		display: flex;
+		margin: 0 -10px;
+
+		@media (max-width: 425px) {
+			display: block;
+		}
+	}
+
+	// .info__item
+
+	&__item {
+		padding: 0 10px;
+
+		@media (max-width: 425px) {
+			&:not(:last-child) {
+				margin: 0px 0px 20px 0px;
+			}
+		}
+	}
+}

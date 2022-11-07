@@ -1,0 +1,268 @@
+.button {
+	border-radius: 121px;
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	vertical-align: center;
+
+	&__gradient {
+		position: absolute;
+		background: linear-gradient(310.24deg, #EB5F62 7.76%, #DB7131 87.94%);
+		border-radius: 121px;
+		z-index: 0;
+		top: -4px;
+		left: -4px;
+		right: -4px;
+		bottom: -4px;
+	}
+
+	&__text {
+		position: relative;
+		z-index: 1;
+		display: inline-flex;
+		flex-direction: row-reverse;
+		align-items: center;
+		justify-content: center;
+		background: $bg-0;
+		border-radius: 121px;
+		font-weight: 500;
+		font-size: 13px;
+		text-transform: uppercase;
+		line-height: normal;
+		height: 38px;
+		padding: 0px 20px;
+		transition: background 0.3s linear 0s, color 0.3s linear 0s;
+
+		&_height {
+			height: 80px;
+			font-size: 20px;
+			background: $white;
+		}
+
+		span {
+			margin: 0px 10px -3px 0px;
+		}
+
+		&::before {
+			font-size: 24px;
+			transform: rotate(90deg);
+			z-index: 1;
+			transition: transform 0.3s linear 0s;
+		}
+
+		@media (any-hover:hover) {
+			&:hover {
+				&.button__text {
+					background: linear-gradient(310.24deg, #EB5F62 7.76%, #DB7131 87.94%);
+					color: $white;
+
+					&::before {
+						transform: rotate(90deg) translateY(-5px);
+					}
+				}
+			}
+		}
+
+		@media (max-width:($md4+px)) {
+			width: 100%;
+			display: flex;
+			height: 80px;
+			font-size: 20px;
+			font-weight: 400;
+		}
+	}
+
+	@media (max-width:($md4+px)) {
+		width: 100%;
+		display: flex;
+	}
+}
+
+.btn {
+	display: inline-block;
+	position: relative;
+	font-size: 20px;
+	color: $navyblue;
+
+	img {}
+
+	span {
+		position: absolute;
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: center;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		&::before {
+			transform: rotate(90deg);
+			font-size: 24px;
+			margin: 0px 0px 0px 10px;
+		}
+	}
+
+	&_white {
+		color: $bg-0;
+	}
+}
+
+.btn-link {
+	font-size: 20px;
+	color: $navyblue;
+	display: inline-flex;
+	flex-direction: row-reverse;
+	transition: color 0.3s ease-in-out 0s;
+	padding: 15px 20px;
+	line-height: 140%;
+
+	@media (any-hover:hover) {
+		&:hover {
+			span {
+				&::before {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	span {
+		position: relative;
+
+		&::before {
+			content: '';
+			width: 1px;
+			height: 1px;
+			bottom: 0px;
+			left: 0;
+			position: absolute;
+			background-color: $gray-02;
+			transition: width 0.3s linear 0s;
+		}
+	}
+
+	&::before {
+		margin: 0px 0px 0px 5px;
+		transform: rotate(90deg);
+	}
+}
+
+.gas-btn {
+	background-color: $bg-7;
+	border-radius: 121px;
+	font-weight: 500;
+	font-size: 13px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: uppercase;
+	flex-direction: row-reverse;
+	padding: 11px 20px 7px 20px;
+	transition: background-color 0.3s ease-in-out 0s;
+
+	@media (any-hover:hover) {
+		&:hover {
+			background-color: $blue-new;
+
+			&::before {
+				transform: rotate(90deg) translateY(-5px);
+			}
+		}
+	}
+
+	&::before {
+		transform: rotate(90deg);
+		font-size: 24px;
+		font-size: 24px;
+		width: 24px;
+		height: 24px;
+		margin: 0px 0px 4px 10px;
+		transition: transform 0.3s linear 0s;
+	}
+
+	/* white */
+
+	color: #FFFFFF;
+
+}
+
+.download {
+	position: relative;
+
+	&::after {
+		content: '';
+		width: 0;
+		height: 0;
+		border-top: 28px solid $white;
+		border-left: 28px solid transparent;
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		right: 0;
+		pointer-events: none;
+	}
+
+	// .download__link
+
+	&__link {
+		color: $navyblue;
+		background-color: $bg-1;
+		padding: 0px 27px 0px 20px;
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: flex-end;
+		align-items: center;
+		transition: background-color 0.3s ease-in-out 0s;
+		line-height: 120%;
+		min-height: 78px;
+
+		@media (any-hover:hover) {
+			&:hover {
+				background-color: $bg-2;
+
+				&::before {
+					color: $navyblue;
+
+				}
+			}
+		}
+
+		&::before {
+			font-size: 24px;
+			color: $gray-03;
+			transition: color 0.3s ease-in-out 0s;
+			margin: 0px 0px 0px 20px;
+		}
+
+		span {
+			flex: 1 1 auto;
+		}
+	}
+}
+
+.btn-callback {
+	padding: 5px 25px;
+	height: 80px;
+	background: $bg-0;
+	border-radius: 121px;
+	display: flex;
+	align-items: center;
+	color: $gray-01;
+	text-transform: uppercase;
+
+	@media (any-hover:hover) {
+		&:hover {
+			span {
+				transform: rotate(90deg) translateY(-5px);
+			}
+		}
+	}
+
+	span {
+		font-size: 24px;
+		transform: rotate(90deg);
+		margin: -4px 0px 0px 10px;
+		transition: transform 0.3s ease 0s;
+	}
+}

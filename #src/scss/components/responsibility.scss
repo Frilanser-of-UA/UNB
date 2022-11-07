@@ -1,0 +1,140 @@
+.responsibility {
+	padding: 100px 0;
+	background-color: $bg-3;
+
+	@media (max-width:($md2+px)) {
+		padding: 80px 0;
+	}
+
+	// .responsibility__container
+
+	&__container {}
+
+	// .responsibility__body
+
+	&__body {}
+
+	// .responsibility__title
+
+	&__title {
+		margin: 0px 0px 50px 0px;
+	}
+
+	// .responsibility__content
+
+	&__content {
+		display: flex;
+
+		@media (max-width:($md4+px)) {
+			display: block;
+		}
+	}
+
+	// .responsibility__left
+
+	&__left {
+		flex: 0 1 300px;
+		margin-right: 100px;
+
+		@media (max-width:($md2+px)) {
+			margin-right: 50px;
+		}
+
+		@media (max-width:($md3+px)) {
+			margin-right: 20px;
+		}
+
+		@media (max-width:($md4+px)) {
+			margin-right: 0px;
+		}
+	}
+
+	// .responsibility__img
+
+	&__img {
+		padding: 0px 0px 163.5% 0px;
+
+		@media (max-width:($md4+px)) {
+			display: none;
+		}
+	}
+
+	// .responsibility__right
+
+	&__right {
+		flex: 0 1 700px;
+	}
+
+	// .responsibility__item
+
+	&__item {
+		padding: 30px 0px 30px 0px;
+		border-bottom: 1px solid $navyblue;
+		text-align: right;
+
+		&:first-child {
+			border-top: 1px solid $navyblue;
+		}
+	}
+
+	// .responsibility__label
+
+	&__label {
+		text-align: left;
+		color: $bg-dark;
+		font-weight: 500;
+		font-size: 40px;
+		line-height: 120%;
+		margin: 0px 0px 20px 0px;
+
+		@media (max-width:($md2+px)) {
+			font-size: 30px;
+			font-weight: 400;
+		}
+	}
+
+	// .responsibility__text
+
+	&__text {
+		text-align: left;
+		line-height: 138%;
+		margin: 0px 0px 15px 0px;
+		font-size: 22px;
+
+		@media (max-width:($md2+px)) {
+			font-size: 20px;
+			line-height: 140%;
+		}
+	}
+
+	// .responsibility__link
+
+	&__link {}
+
+	// .responsibility__list
+
+	&__list {}
+
+	// .responsibility__subitem
+
+	&__subitem {
+		padding: 0px 0px 0px 47px;
+		position: relative;
+		font-size: 22px;
+
+		@media (max-width:($md2+px)) {
+			font-size: 20px;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 32px;
+			height: 1px;
+			background-color: $navyblue;
+			left: 0;
+			top: 0.65em;
+		}
+
+	}
+}

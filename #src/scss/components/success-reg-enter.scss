@@ -1,0 +1,46 @@
+.success-reg-enter {
+	margin: 65px 0px 65px 0px;
+
+	&__container {}
+
+	&__body {
+		max-width: 600px;
+		margin: 0 auto;
+	}
+}
+
+.success {
+	padding: 25px 25px 43px 25px;
+	background: $green-01;
+	border-radius: 7px;
+	text-align: center;
+
+	@media (max-width:($md4+px)) {
+		padding: 15px;
+	}
+
+	&__body {}
+
+	&__icon {
+		font-size: 36px;
+		margin: 0px 0px 10px 0px;
+		color: $bg-dark;
+	}
+
+	&__label {
+		font-size: 30px;
+		line-height: 120%;
+		padding: 0px 0px 20px 0px;
+		margin: 0px 0px 10px 0px;
+	}
+
+	&__text {
+		line-height: 120%;
+
+		p {
+			&:not(:last-child) {
+				margin: 0px 0px 10px 0px;
+			}
+		}
+	}
+}

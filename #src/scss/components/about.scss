@@ -1,0 +1,125 @@
+.about {
+	padding: 100px 0;
+	background-color: $bg-0;
+
+	@media (max-width:($md2+px)) {
+		padding: 80px 0;
+	}
+
+	// .about__container
+
+	&__container {}
+
+	// .about__body
+
+	&__body {
+		max-width: 700px;
+		margin: 0 0 0 auto;
+
+		@media (max-width:($md2+px)) {
+			margin: 0px 0px 0px 0px;
+			max-width: 100%;
+		}
+	}
+
+	// .about__top
+
+	&__top {
+		margin: 0px 0px 60px 0px;
+		position: relative;
+		text-align: center;
+		padding: 50px 120px;
+
+		@media (max-width:($md2+px)) {
+			margin: 0px 0px 30px 0px;
+			padding: 30px 120px;
+		}
+
+		@media (max-width:($md4+px)) {
+			padding: 30px;
+		}
+	}
+
+	// .about__img
+
+	&__img {
+		position: absolute;
+
+		&_left {
+			left: 0;
+			bottom: 0;
+			width: 220px;
+
+			@media (max-width:($md2+px)) {
+				width: 172px;
+			}
+		}
+
+		&_right {
+			right: 0;
+			top: 0;
+			width: 272px;
+
+			@media (max-width:($md2+px)) {
+				width: 185px;
+				top: -15%;
+			}
+		}
+	}
+
+	// .about__title
+
+	&__title {}
+
+	// .about__text
+
+	&__text {
+
+		margin: 0px 0px 20px 0px;
+
+		&:not(:last-child) {
+			margin: 0px 0px 10px 0px;
+		}
+
+	}
+
+	// .about__item
+
+	&__item {
+		display: flex;
+		padding: 20px 0;
+		border-bottom: 1px solid $navyblue;
+
+		&:first-child {
+			border-top: 1px solid $navyblue;
+		}
+	}
+
+	// .about__label
+
+	&__label {
+		font-weight: 500;
+		font-size: 40px;
+		line-height: 119.5%;
+		text-transform: uppercase;
+		flex: 0 1 50%;
+		margin-right: 30px;
+
+		@media (max-width:($md4+px)) {
+			margin-right: 10px;
+		}
+	}
+
+	// .about__subtext
+
+	&__subtext {
+		font-size: 26px;
+		flex: 0 1 50%;
+		line-height: 138%;
+
+		@media (max-width:($md4+px)) {
+			font-size: 22px;
+		}
+
+	}
+}

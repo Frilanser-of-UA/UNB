@@ -1,0 +1,68 @@
+.page {
+
+	// .page__reg
+
+	&__reg-enter {
+		padding: 100px 0px;
+	}
+}
+
+._container-user {
+	max-width: 500px;
+	margin: 0 auto;
+
+	@media (max-width:($md4+px)) {
+		width: auto;
+		padding: 0px 20px;
+	}
+}
+
+.reg-enter {
+
+	// .reg__container
+
+	&__container {}
+
+	// .reg__body
+
+	&__body {}
+
+	&__head {
+		padding: 0px 0px 80px 0px;
+	}
+
+	// .reg__title
+
+	&__title {
+		padding: 0px 0px 20px 0px;
+	}
+
+	// .reg__links
+
+	&__links {
+		font-size: 14px;
+		line-height: 140%;
+	}
+
+	// .reg__link
+
+	&__link {
+		color: $navyblue;
+		transition: color 0.3s ease-in-out 0s;
+		border-bottom: 1.5px solid $navyblue;
+		transition: color 0.3s ease-in-out 0s, border-color 0.3s ease-in-out 0s;
+		margin: 0px 0px 0px 5px;
+
+		@media (any-hover:hover) {
+			&:hover {
+				color: $blue-new;
+				border-color: $blue-new;
+			}
+		}
+
+	}
+
+	// .reg__form
+
+	&__form {}
+}

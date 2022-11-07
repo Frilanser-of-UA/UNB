@@ -1,0 +1,103 @@
+.work {
+	background-color: $bg-3;
+	padding: 100px 0;
+
+	@media (max-width:($md2+px)) {
+		padding: 80px 0;
+	}
+
+	// .work__container
+
+	&__container {}
+
+	// .work__body
+
+	&__body {
+		width: calc(100vw - (100vw - 1100px) / 2);
+		overflow: hidden;
+		margin: 0 0 35px auto;
+
+		@media (max-width:($md1+px)) {
+			margin: 0 0 35px 50px;
+			width: auto;
+		}
+
+		@media (max-width:($md3+px)) {
+			margin: 0 0px 35px 20px;
+		}
+
+		@media (max-width:($md5+px)) {
+			margin: 0 0px 35px 10px;
+		}
+	}
+
+
+	// .work__top
+
+	&__top {}
+
+	// .work__title
+
+	&__title {
+		margin: 0px 0px 50px 0px;
+	}
+
+	// .work__slider
+
+	&__slider {
+		counter-reset: number;
+		padding: 30px 0px 0px 0px;
+		border-top: 2px dashed $bg-4;
+		border-radius: 10px;
+	}
+
+	// .work__slide
+
+	&__slide {
+		width: 360px;
+		cursor: pointer;
+
+		@media (max-width:($md4+px)) {
+			width: 250px;
+		}
+
+		&:nth-child(-n+9) {
+			&::before {
+				content: "0" counters(number, '');
+			}
+		}
+
+		&::before {
+			counter-increment: number;
+			content: "" counters(number, '');
+			font-weight: 500;
+			font-size: 40px;
+			line-height: 120%;
+			margin: 0px 0px 15px 0px;
+			display: inline-block;
+		}
+	}
+
+	// .work__number
+
+	&__number {}
+
+	// .work__label
+
+	&__label {
+		font-size: 24px;
+		line-height: 120%;
+		margin: 0px 0px 15px 0px;
+	}
+
+	// .work__text 
+
+	&__text {
+		font-size: 16px;
+		line-height: 120%;
+	}
+
+	// .work__bottom
+
+	&__bottom {}
+}

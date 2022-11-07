@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ua">
+@@include('_head.html',{
+"title":"Agreement"
+})
+
+<body>
+	<div class="wrapper">
+		<header class="header header_bg-2">
+			@@include('./components/_header-cabinet.html',{})
+		</header>
+		<main class="page">
+			<section class="agreement">
+				<div class="agreement__container _container">
+					<div class="agreement__top">
+						<div class="agreement__titles">
+							<h1 class="agreement__title _icon-question">Угоди</h1>
+							<div class="agreement__label">Діючі та архівні угоди.</div>
+						</div>
+						<button class="agreement__reload-btn reload-btn" type="button">
+							<span class="reload-btn__label">Оновити</span>
+							<span class="reload-btn__icon _icon-reload"></span>
+						</button>
+					</div>
+					<div class="agreement__body">
+						<table class="agreement__table table-agreement">
+							<thead class="table-agreement__head">
+								<tr>
+									<th>Назва угоди</th>
+									<th>статус</th>
+									<th>Продукт</th>
+									<th>родовище</th>
+									<th>Дата начала</th>
+									<th>Дата конца</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody class="table-agreement__body">
+								<tr>
+									<td aria-label="Назва угоди">Договір №%номер договору% від %дата початку%</td>
+									<td aria-label="статус"><span class="table-agreement__label">Діючий</span></td>
+									<td aria-label="Продукт">Газовый конденсат</td>
+									<td aria-label="родовище">УППНГ Сахалинский</td>
+									<td aria-label="Дата начала">2021-07-19</td>
+									<td aria-label="Дата конца">2021-07-19</td>
+									<td class="table-agreement__button"><button class="_icon-chevron"></button></td>
+								</tr>
+								<tr>
+									<td colspan="7" class="td-notvisible">
+										<table class="table-agreement__subtable subtable">
+											<tr>
+												<th class="strech" rowspan="7" colspan="1">Розрахунки</th>
+											</tr>
+											<tr>
+												<th>Операція</th>
+												<th>Дата</th>
+												<th>Відвантаження</th>
+												<th>Оплата</th>
+												<th>Баланс</th>
+											</tr>
+											<tr>
+												<td colspan="4" aria-label="Операція">Поточний баланс</td>
+												<td aria-label="Баланс">0,00</td>
+											</tr>
+											<tr>
+												<td aria-label="Операція">Повернення оплати</td>
+												<td aria-label="Дата">2021-07-27</td>
+												<td aria-label="Відвантаження">0,00</td>
+												<td aria-label="Оплата">-864,00</td>
+												<td aria-label="Баланс">0,00</td>
+											</tr>
+											<tr>
+												<td aria-label="Операція">Реалізація</td>
+												<td aria-label="Дата">2021-07-27</td>
+												<td aria-label="Відвантаження">987 336,00</td>
+												<td aria-label="Оплата">0,00</td>
+												<td aria-label="Баланс">-864,00</td>
+											</tr>
+											<tr>
+												<td aria-label="Операція">Оплата</td>
+												<td aria-label="Дата">2021-07-27</td>
+												<td aria-label="Відвантаження">0,00</td>
+												<td aria-label="Оплата">10 584 000,00</td>
+												<td aria-label="Баланс">11 080 800,00</td>
+											</tr>
+											<tr>
+												<td aria-label="Операція">Оплата</td>
+												<td aria-label="Дата">2021-07-27</td>
+												<td aria-label="Відвантаження">0,00</td>
+												<td aria-label="Оплата">496 800,00</td>
+												<td aria-label="Баланс">496 800,00</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td aria-label="Назва угоди">Договір №%номер договору% від %дата початку%</td>
+									<td aria-label="статус"><span class="table-agreement__label">Діючий</span></td>
+									<td aria-label="Продукт">Газовый конденсат</td>
+									<td aria-label="родовище">УППНГ Сахалинский</td>
+									<td aria-label="Дата начала">2021-07-19</td>
+									<td aria-label="Дата конца">2021-07-19</td>
+									<td class="table-agreement__button"><button class="_icon-chevron"></button></td>
+								</tr>
+								<tr>
+									<td aria-label="Назва угоди">Договір №%номер договору% від %дата початку%</td>
+									<td aria-label="статус"><span class="table-agreement__label">Діючий</span></td>
+									<td aria-label="Продукт">Газовый конденсат</td>
+									<td aria-label="родовище">УППНГ Сахалинский</td>
+									<td aria-label="Дата начала">2021-07-19</td>
+									<td aria-label="Дата конца">2021-07-19</td>
+									<td class="table-agreement__button"><button class="_icon-chevron"></button></td>
+								</tr>
+								<!-- <tr>
+									<td colspan="7" class="td-notvisible">
+										<table class="table-agreement__subtable subtable">
+											<tr>
+												<th rowspan="6">Розрахунки</th>
+												<th>Операція</th>
+												<th>Дата</th>
+												<th>Відвантаження</th>
+												<th>Оплата</th>
+												<th>Баланс</th>
+											</tr>
+											<tr>
+												<td aria-label="Операція">Повернення оплати</td>
+												<td aria-label="Дата">2021-07-27</td>
+												<td aria-label="Відвантаження">0,00</td>
+												<td aria-label="Оплата">-864,00</td>
+												<td aria-label="Баланс">0,00</td>
+											</tr>
+											<tr>
+												<td aria-label="Операція">Повернення оплати</td>
+												<td aria-label="Дата">2021-07-27</td>
+												<td aria-label="Відвантаження">0,00</td>
+												<td aria-label="Оплата">-864,00</td>
+												<td aria-label="Баланс">0,00</td>
+											</tr>
+											<tr>
+												<td aria-label="Операція">Повернення оплати</td>
+												<td aria-label="Дата">2021-07-27</td>
+												<td aria-label="Відвантаження">0,00</td>
+												<td aria-label="Оплата">-864,00</td>
+												<td aria-label="Баланс">0,00</td>
+											</tr>
+											<tr>
+												<td aria-label="Операція">Повернення оплати</td>
+												<td aria-label="Дата">2021-07-27</td>
+												<td aria-label="Відвантаження">0,00</td>
+												<td aria-label="Оплата">-864,00</td>
+												<td aria-label="Баланс">0,00</td>
+											</tr>
+											<tr>
+												<td aria-label="Операція">Повернення оплати</td>
+												<td aria-label="Дата">2021-07-27</td>
+												<td aria-label="Відвантаження">0,00</td>
+												<td aria-label="Оплата">-864,00</td>
+												<td aria-label="Баланс">0,00</td>
+											</tr>
+										</table>
+									</td>
+								</tr> -->
+							</tbody>
+							<tfoot class="table-agreement__foot">
+
+							</tfoot>
+						</table>
+					</div>
+					<div class="agreement__botton">
+						@@include('./components/_links.html',{})
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('./components/_footer-reg.html',{})
+	</div>
+	@@include('_js.html',{})
+</body>
+
+</html>
