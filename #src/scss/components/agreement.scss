@@ -314,11 +314,23 @@
 
 		}
 
+		@media (any-hover:hover) {
+			&:hover {
+				background-color: $bg-0;
+			}
+		}
+
 		&.active {
 			background-color: $bg-00;
 
 			&::before {
 				transform: matrix(1, 0, 0, -1, 0, 0);
+			}
+
+			@media (any-hover:hover) {
+				&:hover {
+					background-color: $bg-00;
+				}
 			}
 
 			@media (max-width:($md2+px)) {

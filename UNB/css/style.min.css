@@ -2036,7 +2036,7 @@ body.ie ._ibg img {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
-  padding: 20px 0 20px 0;
+  padding: 20px 3px 20px 0;
   letter-spacing: -0.01em;
   font-size: 20px;
   color: #0E273D;
@@ -2048,7 +2048,7 @@ body.ie ._ibg img {
     background-color: #F0F7FF;
   }
   .links__link:hover::before {
-    transform: rotate(90deg) translateY(-10px);
+    transform: rotate(90deg) translateY(-3px);
   }
 }
 .links__link:last-child {
@@ -2056,7 +2056,7 @@ body.ie ._ibg img {
 }
 .links__link::before {
   transform: rotate(90deg);
-  transition: transform 0.3s ease-in-out 0s;
+  transition: transform 0.4s ease-in-out 0s;
   margin: 0px 0px 0px 20px;
 }
 
@@ -5202,11 +5202,21 @@ body.ie ._ibg img {
 .table-agr__button::before {
   transition: transform 0.3s ease-out 0s;
 }
+@media (any-hover: hover) {
+  .table-agr__button:hover {
+    background-color: #F0F7FF;
+  }
+}
 .table-agr__button.active {
   background-color: #F6FAFF;
 }
 .table-agr__button.active::before {
   transform: matrix(1, 0, 0, -1, 0, 0);
+}
+@media (any-hover: hover) {
+  .table-agr__button.active:hover {
+    background-color: #F6FAFF;
+  }
 }
 @media (max-width: 1024px) {
   .table-agr__button.active {
