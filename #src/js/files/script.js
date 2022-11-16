@@ -25,19 +25,6 @@ window.onload = function () {
 		} else if (!targetElement.closest('.user-cab') && document.querySelector('.user-cab.active')) {
 			document.querySelector('.user-cab').classList.remove('active');
 		}
-		// ===============tooltip==========
-		if (window.innerWidth <= 768) {
-			if (targetElement.classList.contains('tooltip__icon')) {
-				document.querySelector('.tooltip').classList.toggle('active');
-
-			} else if (!targetElement.closest('.tooltip') && document.querySelector('.tooltip.active')) {
-				document.querySelector('.tooltip').classList.remove('active');
-			}
-			if (targetElement.classList.contains('tooltip__cloze')) {
-				document.querySelector('.tooltip').classList.remove('active');
-			}
-		}
-
 	}
 	// --------------Если адресс ссылки пустой то отключаем ее--------------
 	const linksMenu = document.querySelectorAll('.menu__link');
@@ -56,8 +43,23 @@ window.onload = function () {
 			}, false);
 		}
 	});
-
 };
+
+// ===============tooltip==========
+if (window.innerWidth <= 768) {
+	let tooltips = document.querySelectorAll('.tooltip');
+	tooltips.forEach(function (tooltip, index) {
+		let tooltipIcon = tooltip.querySelector('.tooltip__icon')
+		let tooltipCloze = tooltip.querySelector('.tooltip__cloze')
+		tooltipIcon.addEventListener('click', function () {
+			tooltip.classList.toggle('active');
+		});
+		tooltipCloze.addEventListener('click', function () {
+			tooltip.classList.remove('active')
+		});
+	});
+}
+// ===============tooltip==========
 
 document.querySelectorAll('.menu__button').forEach(function (link, index) {
 	link.addEventListener('click', function () {

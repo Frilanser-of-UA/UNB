@@ -66,13 +66,13 @@
 	&.active {
 		@media (max-width:($md3+px)) {
 			.tooltip__body {
-				top: 35px;
+				top: 25px;
 				opacity: 1;
 				visibility: visible;
 				pointer-events: auto;
 
 				&_position {
-					top: 35px;
+					top: 25px;
 				}
 			}
 		}
