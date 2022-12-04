@@ -322,4 +322,26 @@ btnPass.forEach(function (btn) {
 			btn.classList.add('_icon-eye-off-line');
 		}
 	});
-}) 
+})
+// chat================================================
+const chatBody = document.querySelector('.chat__wrap');
+if (chatBody) {
+	new SimpleBar(chatBody,
+		{
+			autoHide: false,
+			// forceVisible: true | 'x' | 'y',
+			scrollbarMinSize: '92',
+			scrollbarMaxSize: '92',
+		});
+}
+let chatBtnOpen = document.querySelector('.chat__btn');
+let chatBtnCloze = document.querySelector('.chat__btn-close');
+let chatWrapper = document.querySelector('.chat__wrapper');
+if (chatBtnOpen) {
+	chatBtnOpen.addEventListener('click', function () {
+		chatWrapper.classList.add('active');
+	})
+	chatBtnCloze.addEventListener('click', function () {
+		chatWrapper.classList.remove('active');
+	})
+}

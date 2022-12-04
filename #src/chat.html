@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ua">
+@@include('_head.html',{
+"title":"Чат"
+})
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			@@include('./components/_header.html',{})
+		</header>
+		<main class="page">
+			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		</main>
+		@@include('./components/_footer.html',{})
+		<div class="chat">
+			<div class="chat__button-chat">
+				<div class="chat__label">
+					👋Привіт, чат тут
+				</div>
+				<button class="chat__btn" type="button">
+					<span class="chat__num">1</span>
+					<div class="chat__dots">
+						<span></span><span></span><span></span>
+					</div>
+				</button>
+			</div>
+			<div class="chat__wrapper ">
+				<div class="chat__head">
+					<div class="chat__avatar">
+						<div class="chat__img _ibg"><img src="img/chat/avatar.jpg" alt="Зображення аватарки"></div>
+						<span class="chat__status online"></span>
+					</div>
+					<div class="chat__column">
+						<div class="chat__name">Андрій</div>
+						<div class="chat__description">Адміністратор аукціону</div>
+					</div>
+					<button class="chat__btn-close _icon-close"></button>
+				</div>
+				<div class="chat__body">
+					<div class="chat__wrap">
+						<div class="chat__data">
+							<div class="chat__day">листопад 30</div>
+						</div>
+						<div class="chat__message-client message-client">
+							<div class="message-client__text">Привіт!</div>
+							<div class="message-client__text">Моє запитання до адміністратора аукціону. Одне або декілька речень</div>
+							<div class="message-client__time _icon-time-icon">13:45</div>
+						</div>
+						<div class="chat__message-admin message-admin">
+							<div class="message-admin__text">Привіт!</div>
+							<div class="message-admin__text">Михайле, відповідаю вам на ваше запитання. Відповідь від адміністратора аукціону. Одне або декілька речень. Уточнення, повідомлення, інші деталі та роз’яснення.</div>
+							<div class="message-admin__time">13:45</div>
+						</div>
+						<div class="chat__message-client message-client">
+							<div class="message-client__text">Моє запитання до адміністратора аукціону. Одне або декілька речень</div>
+							<div class="message-client__time _icon-time-icon">13:45</div>
+						</div>
+					</div>
+				</div>
+				<div class="chat__foot">
+					<form action="#" id="form-chat" class="chat__form form-chat" method="POST" novalidate="novalidate">
+						<div class="form-chat__body">
+							<label for="chat-message" class="form-chat__label">
+								<textarea id="chat-message" class="form-chat__textarea" type="message" placeholder="Ваше запитання"></textarea>
+							</label>
+							<button type="submit" class="form-chat__btn _icon-push"></button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	@@include('_js.html',{})
+</body>
+
+</html>

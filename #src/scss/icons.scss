@@ -67,7 +67,6 @@
 
 ._icon-ic:before {
 	content: "\e90c";
-	color: #9fb0bf;
 }
 
 ._icon-link:before {
@@ -86,46 +85,54 @@
 	content: "\e910";
 }
 
-._icon-question:before {
+._icon-push:before {
 	content: "\e911";
 }
 
-._icon-reload:before {
+._icon-question:before {
 	content: "\e912";
 }
 
-._icon-search:before {
+._icon-reload:before {
 	content: "\e913";
 }
 
-._icon-settings:before {
+._icon-search:before {
 	content: "\e914";
 }
 
-._icon-telegram:before {
+._icon-settings:before {
 	content: "\e915";
 }
 
-._icon-triangle:before {
+._icon-telegram:before {
 	content: "\e916";
 }
 
-._icon-user:before {
+._icon-time-icon:before {
 	content: "\e917";
 }
 
-._icon-user-1:before {
+._icon-triangle:before {
 	content: "\e918";
 }
 
-._icon-user-2:before {
+._icon-user:before {
 	content: "\e919";
 }
 
-._icon-user-3:before {
+._icon-user-1:before {
 	content: "\e91a";
 }
 
-._icon-warning:before {
+._icon-user-2:before {
 	content: "\e91b";
+}
+
+._icon-user-3:before {
+	content: "\e91c";
+}
+
+._icon-warning:before {
+	content: "\e91d";
 }

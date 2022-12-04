@@ -29,3 +29,18 @@ document.addEventListener('DOMContentLoaded', function () {
 		})
 	}
 })
+// chat textarea
+const myText = document.querySelector('.form-chat__textarea');
+const myTextWrapper = document.querySelector('.form-chat__body');
+if (myText) {
+	myText.style.cssText = `height: ${myText.scrollHeight}px; overflow-y: hidden`;
+	myText.addEventListener("input", function () {
+		this.style.height = "20px";
+		this.style.height = `${this.scrollHeight}px`;
+		if (myText.value === '') {
+			myTextWrapper.classList.remove('active')
+		} else {
+			myTextWrapper.classList.add('active');
+		}
+	});
+}
