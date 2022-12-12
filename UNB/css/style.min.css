@@ -5990,7 +5990,7 @@ body.ie ._ibg img {
 }
 
 .history {
-  padding: 65px 0 150px 0;
+  padding: 65px 0 100px 0;
 }
 @media (max-width: 1200px) {
   .history {
@@ -6009,9 +6009,6 @@ body.ie ._ibg img {
   .history__top {
     display: none;
   }
-}
-.history__body {
-  margin: 0px 0px 100px 0px;
 }
 .dasboard-info {
   border-radius: 10px;
