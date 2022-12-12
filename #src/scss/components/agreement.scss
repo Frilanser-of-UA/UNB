@@ -110,6 +110,20 @@
 	border-radius: 10px;
 	position: relative;
 
+	&.variant-2 {
+		.table-agr__grid {
+			grid-template-columns: 214px 123px 180px 193px 137px 1fr 45px;
+
+			@media (max-width:($md1+px)) {
+				grid-template-columns: 240px repeat(5, 1fr) 45px;
+			}
+
+			@media (max-width:($md2+px)) {
+				grid-template-columns: 1fr auto;
+			}
+		}
+	}
+
 	@media (max-width:($md2+px)) {
 		// border: 1px solid $bg-2;
 		background-color: #EFF6FF;
@@ -361,6 +375,10 @@
 		grid-column: 1 / 8;
 		display: none;
 
+		&.padding-none {
+			padding: 0;
+		}
+
 		&.active {
 			display: block;
 
@@ -395,6 +413,30 @@
 	}
 
 	&__subtable {}
+
+	// .table-agr__info
+
+	&__info {
+		background-color: $bg-2;
+		padding: 15px 20px 20px 20px;
+
+		@media (max-width:($md4+px)) {
+			padding: 10px;
+		}
+
+		p {
+			line-height: 125%;
+
+			&:not(:last-child) {
+				margin: 0px 0px 10px 0px;
+			}
+		}
+
+		a {
+			color: $navyblue;
+		}
+	}
+
 }
 
 .subtable {

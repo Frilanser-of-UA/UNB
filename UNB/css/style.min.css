@@ -5438,6 +5438,19 @@ body.ie ._ibg img {
   border-radius: 10px;
   position: relative;
 }
+.table-agr.variant-2 .table-agr__grid {
+  grid-template-columns: 214px 123px 180px 193px 137px 1fr 45px;
+}
+@media (max-width: 1200px) {
+  .table-agr.variant-2 .table-agr__grid {
+    grid-template-columns: 240px repeat(5, 1fr) 45px;
+  }
+}
+@media (max-width: 1024px) {
+  .table-agr.variant-2 .table-agr__grid {
+    grid-template-columns: 1fr auto;
+  }
+}
 @media (max-width: 1024px) {
   .table-agr {
     background-color: #EFF6FF;
@@ -5658,6 +5671,9 @@ body.ie ._ibg img {
   grid-column: 1/8;
   display: none;
 }
+.table-agr__item-table.padding-none {
+  padding: 0;
+}
 .table-agr__item-table.active {
   display: block;
 }
@@ -5685,6 +5701,25 @@ body.ie ._ibg img {
 .table-agr__label.yellow {
   background: #FFEEC4;
 }
+.table-agr__info {
+  background-color: #D3E8FF;
+  padding: 15px 20px 20px 20px;
+}
+@media (max-width: 640px) {
+  .table-agr__info {
+    padding: 10px;
+  }
+}
+.table-agr__info p {
+  line-height: 125%;
+}
+.table-agr__info p:not(:last-child) {
+  margin: 0px 0px 10px 0px;
+}
+.table-agr__info a {
+  color: #0E273D;
+}
+
 .subtable {
   width: 100%;
   border-right: 1px solid #D3E8FF;
