@@ -23,7 +23,13 @@
 
 	&__table {}
 
-	&__botton {}
+	&__botton {
+		padding: 100px 0px 0px 0px;
+
+		@media (max-width:($md3+px)) {
+			padding: 80px 0px 0px 0px;
+		}
+	}
 }
 
 .dasboard-info {

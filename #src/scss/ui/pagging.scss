@@ -3,6 +3,12 @@
 	align-items: center;
 	justify-content: end;
 
+	&.lite-blue {
+		li {
+			background-color: $bg-0;
+		}
+	}
+
 	// .pagging__arrow
 	&__arrow {
 		flex: 0 0 37px;
@@ -14,6 +20,12 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+
+		@media (max-width:($md3+px)) {
+			width: 46px;
+			flex: 0 0 46px;
+			height: 46px;
+		}
 
 		&:last-child {
 			transform: rotate(-90deg);
@@ -45,6 +57,12 @@
 			justify-content: center;
 			display: inline-flex;
 			transition: background-color 0.3s ease-in-out 0s;
+
+			@media (max-width:($md3+px)) {
+				width: 46px;
+				flex: 0 0 46px;
+				height: 46px;
+			}
 
 			@media (any-hover:hover) {
 				&:hover {

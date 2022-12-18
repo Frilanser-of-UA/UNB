@@ -1,0 +1,45 @@
+.banner {
+
+	// .banner__container
+
+	&__container {}
+
+	// .banner__body
+
+	&__body {
+		position: relative;
+		overflow: hidden;
+
+	}
+
+	// .banner__img
+
+	&__img {
+		padding: 0px 0px 487px 0px;
+
+
+		img {
+			transition: height 0.5s linear 0s;
+		}
+
+		@media (max-width:($md2+px)) {
+			padding: 0px 0px 44.26% 0px;
+		}
+	}
+
+	// .banner__paralax-blok
+
+	&__paralax-blok {
+		transition: transform 0.5s linear 0s;
+		position: absolute;
+		background-color: $bg-0;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		right: 100%;
+
+		@media (max-width:($md3+px)) {
+			display: none;
+		}
+	}
+}
