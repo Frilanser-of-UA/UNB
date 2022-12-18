@@ -119,3 +119,17 @@ let workSlider = new Swiper('.work__slider', {
 		},
 	}
 });
+
+
+
+let cards = document.querySelector('.slider-cards');
+if (cards) {
+	let flktyCards = new Flickity(cards, {
+		// options
+		cellAlign: 'left',
+		contain: true,
+		pageDots: false,
+		groupCells: true,
+		draggable: '>1',
+	});
+}

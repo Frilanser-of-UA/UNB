@@ -126,6 +126,7 @@ body {
 @import "./components/footer";
 @import "./components/chat";
 
+
 @import "./pages/home";
 @import "./pages/production";
 @import "./pages/gas";
@@ -134,6 +135,12 @@ body {
 @import "./pages/reg-enter";
 @import "./pages/agreement";
 @import "./pages/history";
+
+@import "./components/top-wrap";
+@import "./components/banner";
+@import "./components/news-articles";
+@import "./components/info-links";
+@import "./components/info-cards";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 
 //<ОСНОВНОЙ БЛОК>====================================================================================================

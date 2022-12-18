@@ -1,0 +1,32 @@
+.top-wrap {
+	background-color: $bg-0;
+	padding: 100px 0 25px 0;
+	// .top-wrap__container
+
+	&__container {}
+
+	// .top-wrap__body
+
+	&__body {
+		max-width: 700px;
+	}
+
+	// .top-wrap__title
+
+	&__title {
+		h1 {
+			font-weight: 500;
+			font-size: 40px;
+			line-height: 120%;
+			text-transform: uppercase;
+			padding: 0px 0px 30px 0px;
+		}
+	}
+
+	// .top-wrap__text
+
+	&__text {
+		font-size: 16px;
+		line-height: 120%;
+	}
+}

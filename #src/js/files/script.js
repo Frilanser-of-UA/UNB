@@ -345,3 +345,37 @@ if (chatBtnOpen) {
 		chatWrapper.classList.remove('active');
 	})
 }
+
+// ==========================banner===============================
+let banner = document.querySelector(".banner");
+let paralaxBox = document.querySelector(".banner__paralax-blok");
+let bannerImg = document.querySelector(".banner__img img");
+let paramsAnimate = 4;
+let paramsAnimateImg = 100;
+let paramsSizeBlok = 500;
+let paramsSizeBlokImg = 500;
+if (banner) {
+	window.addEventListener('scroll', function (e) {
+		let bannerTop = banner.getBoundingClientRect().top + pageYOffset; // Координаті елемента от верха
+		let topScroll = window.scrollY; //координаті скролл окна от верха
+		let a = banner.getBoundingClientRect().top; // координаті от верха страниці
+		let c = banner.getBoundingClientRect().height; //вісота blok
+		let b = document.body.clientHeight; //вісота окна
+		let translateX = topScroll - bannerTop + b - c;
+		if (c > 0) {
+			paralaxBox.style.transform = "translateX(" + translateX / paramsAnimate + "px)";
+		}
+		if (topScroll < 20) {
+			paralaxBox.style.transform = "translateX(" + 0 + "px)";
+		}
+		if (translateX >= paramsSizeBlok) {
+			paralaxBox.style.transform = "translateX(" + paramsSizeBlok / paramsAnimate + "px)";
+		}
+		if (translateX > 1) {
+			bannerImg.style.height = 100 + translateX / paramsAnimateImg + "%";
+		}
+		if (topScroll < 20) {
+			bannerImg.style.height = 100 + "%";
+		}
+	});
+}
