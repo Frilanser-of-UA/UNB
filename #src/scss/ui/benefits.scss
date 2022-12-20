@@ -1,0 +1,43 @@
+.item-benefists {
+	@media (max-width:($md5+px)) {
+		&:not(:last-child) {
+			margin: 0px 0px 30px 0px;
+		}
+	}
+
+	// .item-benefists__img
+
+	&__img {
+		padding: 0px 0px 10px 0px;
+
+		img {
+			width: 50px;
+			height: 50px;
+			display: block;
+		}
+	}
+
+	// .item-benefists__title
+
+	&__title {
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 115%;
+		padding: 0px 0px 5px 0px;
+
+		@media (max-width:($md3+px)) {
+			font-size: 18px;
+		}
+	}
+
+	// .item-benefists__text
+
+	&__text {
+		font-size: 16px;
+		line-height: 140%;
+
+		@media (max-width:($md3+px)) {
+			font-size: 14px;
+		}
+	}
+}

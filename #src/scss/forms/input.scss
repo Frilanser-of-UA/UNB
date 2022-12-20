@@ -55,6 +55,113 @@ textarea {
 	}
 }
 
+.file {
+	position: relative;
+
+	@media (any-hover:hover) {
+		&:hover {
+			.file__button {
+				background: $bg-2;
+				border-color: $bg-2;
+			}
+		}
+	}
+
+	// .file__input
+	&__input {
+		position: absolute;
+		font-size: 0;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		width: 100%;
+		height: 100%;
+		cursor: pointer;
+
+	}
+
+	// .file__button
+
+	&__button {
+		display: flex;
+		font-size: 14px;
+		align-items: center;
+		padding: 10px;
+		height: 64px;
+		background: $bg-0;
+		border: 2px solid $bg-3;
+		border-radius: 20px;
+		width: 100%;
+		transition: all 0.3s ease 0s;
+		text-align: left;
+
+		@media (max-width:($md3+px)) {
+			font-size: 18px;
+			height: 80px;
+
+		}
+
+
+		&.filed {
+			background: $bg-2;
+			border-color: $bg-2;
+			padding: 10px 20px;
+
+			.file__icon {
+				display: none;
+			}
+
+			.file__filed {
+				display: block;
+			}
+		}
+
+		&.error {
+			background: $red-01;
+			border-color: $red-02;
+			padding: 10px 20px;
+			color: $red-03;
+
+			.file__icon {
+				color: $red-03;
+			}
+		}
+
+		&::before {}
+	}
+
+	&__icon {
+		font-size: 24px;
+		margin: 0px 10px 0px 0px;
+		display: block;
+	}
+
+	&__filed {
+		font-size: 24px;
+		display: block;
+		margin-left: auto;
+		display: none;
+	}
+
+	// .file__name
+
+	&__name {
+		font-size: 14px;
+		line-height: 120%;
+	}
+
+	// .file__error-message
+
+	&__error-message {
+		font-size: 14px;
+		line-height: 120%;
+		color: $red-03;
+		padding: 10px 0px 0px 0px;
+		display: none;
+	}
+}
+
+
 input[type="password"] {
 	padding: 0px 30px 1px 0px;
 }

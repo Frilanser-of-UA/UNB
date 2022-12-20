@@ -1,4 +1,80 @@
 .form {
+	&.form-write {
+		max-width: 600px;
+
+		.form__line {
+			&:not(:last-child) {
+				margin: 0px 0px 13px 0px;
+
+				@media (max-width:($md3+px)) {
+					margin: 0px 0px 30px 0px;
+				}
+			}
+
+			&._focus {
+				.form__input {
+					padding: 0px 0px 9px 0px;
+				}
+			}
+		}
+
+		.form__label {
+			font-size: 16px;
+			top: 25px;
+			line-height: 120%;
+
+			@media (max-width:($md3+px)) {
+				font-size: 18px;
+			}
+		}
+
+
+		.form__input {
+			font-size: 16px;
+			padding: 0px 0px 10px 0px;
+			line-height: 120%;
+
+			@media (max-width:($md3+px)) {
+				font-size: 18px;
+			}
+
+			&::placeholder {
+				font-size: 16px;
+
+				@media (max-width:($md3+px)) {
+					font-size: 18px;
+				}
+			}
+		}
+
+		.form__text {
+			margin: 0px 0px 13px 0px;
+			padding: 20px 0px 0px 0px;
+
+			@media (max-width:($md3+px)) {
+				margin: 0px 0px 0px 0px;
+			}
+		}
+
+		.form__row {
+			padding: 15px 0px 0px 0px;
+			align-items: flex-start;
+
+			@media (max-width:($md3+px)) {
+				padding: 45px 0px 0px 0px;
+			}
+
+			@media (max-width:($md4+px)) {
+				flex-direction: row;
+			}
+		}
+
+		.form__button {
+			@media (max-width:($md4+px)) {
+				margin: 0;
+			}
+		}
+	}
 
 	// .form__top
 
@@ -23,6 +99,10 @@
 
 		&:not(:last-child) {
 			margin: 0px 0px 25px 0px;
+		}
+
+		&.files {
+			padding-top: 0;
 		}
 
 		&._focus {
@@ -86,6 +166,16 @@
 		&_size {
 			top: 30px;
 		}
+	}
+
+	// .form__label
+
+	&__label-file {
+		font-size: 14px;
+		line-height: 120%;
+		cursor: pointer;
+		padding: 20px 0px 10px 0px;
+		display: inline-block;
 	}
 
 	// .form__body

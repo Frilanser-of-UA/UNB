@@ -10,7 +10,115 @@
 
 	// .info-links__items
 
-	&__items {}
+	&__items {
+		&.icon--transparent {
+			.info-links__item {
+				height: 53px;
+
+				@media (max-width:($md4+px)) {
+					height: auto;
+					padding: 0;
+				}
+			}
+
+			.info-links__label {
+				margin: 15px 0;
+			}
+
+			.info-links__right {
+				@media (max-width:($md4+px)) {
+					justify-content: flex-end;
+				}
+			}
+
+			.info-links__link {
+				font-weight: 600;
+
+				@media (max-width:($md2+px)) {
+					span {
+						display: block;
+					}
+				}
+
+				@media (max-width:($md4+px)) {
+					height: 48px;
+				}
+
+				&::before {
+					background-color: transparent;
+					color: $navyblue;
+					font-size: 24px;
+				}
+			}
+
+			.info-links__data {
+				display: none;
+			}
+		}
+	}
+
+	// .info-links__links
+
+	&__links {
+		display: flex;
+		flex-wrap: wrap;
+		margin: -5px -2.5px;
+
+		@media (max-width:($md3+px)) {
+			display: block;
+			margin: 0;
+		}
+
+		.info-links__item {
+			height: auto;
+			border: none;
+			display: block;
+			padding: 5px 2.5px;
+		}
+
+		.info-links__link {
+			border: 1px solid #0B1F31;
+			padding: 10px 44px 16px 10px;
+			font-size: 15px;
+
+			@media (max-width:($md3+px)) {
+				width: 100%;
+				font-size: 18px;
+			}
+
+			@media (max-width:($md4+px)) {
+				flex-direction: row-reverse;
+				padding: 10px 10px 16px 10px;
+				font-size: 18px;
+			}
+
+			&:not(:last-child) {
+				margin: 0;
+			}
+
+			&::before {
+				font-size: 24px;
+				width: auto;
+				height: auto;
+				background-color: transparent;
+				color: $navyblue;
+				right: 10px;
+
+				@media (max-width:($md4+px)) {
+					margin: 0px 0px 0px 15px;
+				}
+			}
+
+			span {
+				@media (max-width:($md2+px)) {
+					display: block;
+				}
+
+
+			}
+		}
+
+	}
 
 	// .info-links__item
 
@@ -20,13 +128,23 @@
 		height: 70px;
 		background-color: $bg-0;
 		border-top: 1px solid $bg-dark;
+
+		@media (max-width:($md4+px)) {
+			display: block;
+			padding: 10px 0;
+			height: auto;
+		}
 	}
 
 	// .info-links__left
 
 	&__left {
-		flex: 0 1 615px;
+		flex: 1 1 auto;
 		margin: 0px 10px 0px 0px;
+
+		@media (max-width:($md4+px)) {
+			margin: 0;
+		}
 	}
 
 	// .info-links__label
@@ -36,6 +154,10 @@
 		font-size: 18px;
 		color: $bg-dark;
 		line-height: 120%;
+
+		@media (max-width:($md4+px)) {
+			margin: 0px 0px 10px 0px;
+		}
 	}
 
 	// .info-links__right
@@ -43,6 +165,11 @@
 	&__right {
 		display: flex;
 		align-items: center;
+		height: 100%;
+
+		@media (max-width:($md4+px)) {
+			height: auto;
+		}
 	}
 
 	// .info-links__data
@@ -52,20 +179,31 @@
 		font-size: 18px;
 		line-height: 120%;
 		margin: 0px 25px 0px 0px;
+
+		@media (max-width:($md4+px)) {
+			flex: 1 1 auto;
+		}
 	}
 
 	// .info-links__link
 
 	&__link {
 		font-weight: 500;
-		font-size: 15px;
+		font-size: 18px;
 		line-height: 140%;
 		color: $navyblue;
-		display: inline-flex;
-		flex-direction: row-reverse;
+		display: flex;
 		align-items: center;
+		justify-content: space-between;
 		position: relative;
 		padding: 0px 43px 0px 0px;
+		height: 100%;
+
+		@media (max-width:($md4+px)) {
+			padding: 0;
+			height: auto;
+		}
+
 
 		&.disabled {
 			color: #526271;
@@ -75,34 +213,47 @@
 				background-color: $gray-01;
 			}
 
-			&::after {
-				width: 0;
+			span {
+				&::after {
+					width: 0;
+				}
 			}
 		}
 
 		@media (any-hover:hover) {
 			&:hover {
-				&::after {
-					width: calc(100% - 43px);
+				span {
+					&::after {
+						width: 100%;
+					}
 				}
 			}
 		}
 
-		&::after {
-			content: '';
-			width: 0;
-			height: 1px;
-			background-color: $navyblue;
-			position: absolute;
-			left: 0;
-			bottom: 0;
-			transition: width 0.3s ease 0s;
+		span {
+			position: relative;
+			display: block;
+
+			@media (max-width:($md2+px)) {
+				display: none;
+			}
+
+			&::after {
+				content: '';
+				width: 0;
+				height: 1px;
+				background-color: $navyblue;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				transition: width 0.3s ease 0s;
+			}
 		}
+
 
 		&::before {
 			font-size: 18px;
 			width: 40px;
-			flex: 0 0 40px;
 			height: 40px;
 			color: $white;
 			background-color: $bg-dark;
@@ -110,17 +261,23 @@
 			align-items: center;
 			justify-content: center;
 			border-radius: 50%;
-			margin: 0px 0px 0px 3px;
 			position: absolute;
 			right: 0px;
 			top: 50%;
 			transform: translateY(-50%);
+
+			@media (max-width:($md4+px)) {
+				position: static;
+				transform: translateY(0%);
+			}
 		}
-
-
 
 		&:not(:last-child) {
 			margin: 0px 25px 0px 0px;
+
+			@media (max-width:($md2+px)) {
+				margin: 0px 5px 0px 0px;
+			}
 		}
 	}
 

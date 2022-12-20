@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ua">
+@@include('_head.html',{
+"title":"Контакты"
+})
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			@@include('./components/_header.html',{})
+		</header>
+		<main class="page">
+			<!-- ===========top-wrap ==========-->
+			<section class="top-wrap">
+				<div class="top-wrap__container _container">
+					<div class="top-wrap__body">
+						<div class="top-wrap__title">
+							<h1>Контакти</h1>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- ===========contacts 100% 3col ==========-->
+			<section class="contacts">
+				<div class="contacts__container _container">
+					<div class="contacts__body">
+						<div class="contacts__title title-lending">
+							<h2>Контакти</h2>
+						</div>
+						<div class="contacts__wrap grid--30 gap--small">
+							<div class="contacts__colum">
+								<div class="contacts__item">
+									<div class="contacts__label">
+										<h2>Адреса</h2>
+									</div>
+									<a href="#" target="_blank" class="contacts__contact-link">01010, Україна, Київ, вул. Московська 32/2</a>
+								</div>
+								<div class="contacts__item">
+									<div class="contacts__label">
+										<h2>Електронна пошта</h2>
+									</div>
+									<a href="mailto:info@unb.ua" target="_blank" class="contacts__contact-link">info@unb.ua</a>
+								</div>
+							</div>
+							<div class="contacts__colum">
+								<div class="contacts__item">
+									<div class="contacts__label">
+										<h2>Телефони</h2>
+									</div>
+									<a href="tel:+380442257775" class="contacts__contact-link">+38 (044) 225-77-75</a>
+									<a href="tel:+380445380777" class="contacts__contact-link">+38 (044) 538-07-77</a>
+								</div>
+								<div class="contacts__item">
+									<div class="contacts__label">
+										<h2>Факс</h2>
+									</div>
+									<a href="tel:+380442255335" class="contacts__contact-link">+38 (044 )225-53-35</a>
+								</div>
+							</div>
+							<div class="contacts__colum">
+								<div class="contacts__item">
+									<div class="contacts__label">
+										<h2>Соцмережі</h2>
+									</div>
+									<a href="#" target="_blank" class="contacts__contact-link inline">Facebook</a>
+									<a href="#" target="_blank" class="contacts__contact-link inline">Youtube</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- ===========form-block==========-->
+			<section class="form-block">
+				<div class="form-block__container _container">
+					<div class="form-block__body">
+						<div class="form-block__title title-lending">
+							<h2>Напишіть нам</h2>
+						</div>
+						<form action="#" id="form" method="POST" novalidate="novalidate" class="form form-write">
+							<div class="form__line">
+								<input id="user-name-1" class="form__input input" type="text" name="Імя" placeholder="Ваше імя">
+								<label class="form__label" for="user-name">Імя</label>
+							</div>
+							<div class="form__line">
+								<input id="email" class="form__input input" type="email" name="Email" placeholder="Placeholder">
+								<label class="form__label" for="email">Ваш Email</label>
+							</div>
+							<div class="form__line">
+								<input id="tel" class="form__input input" type="tel" name="Телефон" placeholder="" inputmode="text">
+								<label class="form__label" for="tel">Телефон</label>
+							</div>
+							<div class="form__line">
+								<input id="job-title" class="form__input input" type="text" name="Посада" placeholder="Placeholder">
+								<label class="form__label" for="job-title">Посада</label>
+							</div>
+							<div class="form__line">
+								<input id="latter" class="form__input input" type="text" name="лист" placeholder="Placeholder">
+								<label class="form__label" for="latter">Супровідний лист</label>
+							</div>
+							<div class="form__line files">
+								<label class="form__label-file" for="file-input">Прикріпіть файл</label>
+								<div class="form__file file">
+									<input accept=".txt, .doc, .pdf" id="file-input" class="file__input" type="file" name="file">
+									<button type="button" class="file__button">
+										<span class="file__icon _icon-attachment"></span>
+										Завантажити файл. txt, pdf, doc
+										<span class="file__filed _icon-check-02"></span>
+									</button>
+									<div class="file__error-message">Підтримуються файли лише вказаних форматів. txt, pdf, doc</div>
+								</div>
+							</div>
+							<div class="form__text">Відправляючи цю форму ви погоджуєтесь з <a href="#" class="form__link">правилами конфиденційності</a></div>
+							<div class="form__row">
+								<!--FIX ====Класс  filed сьили после загрузки файлов Класс error стили ошибки============================= -->
+								<button disabled form="form-reg" class="form__button gas-btn heigh-m _icon-arrow">відправити</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+			<!-- =====================info-cards==================== -->
+			<secttion class="info-cards">
+				<div class="info-cards__container _container">
+					<div class="info-cards__body">
+						<div class="info-cards__title">
+							<h2>корисні розділи</h2>
+						</div>
+						<div class="info-cards__items slider-cards">
+							<div class="info-cards__card card-i">
+								<a href="#" target="_blank" class="card-i__body">
+									<div class="card-i__img _ibg">
+										<img src="img/article/img-article.jpg" alt="">
+									</div>
+									<div class="card-i__title">«Укрнафтобуріння» успішно завершило монтаж та пуск в експлуатацію УШГН свердловини №54 Сахалінського нафтогазоконденсатного родовища</div>
+								</a>
+							</div>
+							<div class="info-cards__card card-i">
+								<a href="#" target="_blank" class="card-i__body">
+									<div class="card-i__img _ibg">
+										<img src="img/article/img-article.jpg" alt="">
+									</div>
+									<div class="card-i__title">«Укрнафтобуріння» успішно завершило монтаж та пуск в експлуатацію УШГН свердловини №54 Сахалінського нафтогазоконденсатного родовища</div>
+								</a>
+							</div>
+							<div class="info-cards__card card-i">
+								<a href="#" target="_blank" class="card-i__body">
+									<div class="card-i__img _ibg">
+										<img src="img/article/img-article.jpg" alt="">
+									</div>
+									<div class="card-i__title">«Укрнафтобуріння» успішно завершило монтаж та пуск в експлуатацію УШГН свердловини №54 Сахалінського нафтогазоконденсатного родовища</div>
+								</a>
+							</div>
+							<div class="info-cards__card card-i">
+								<a href="#" target="_blank" class="card-i__body">
+									<div class="card-i__img _ibg">
+										<img src="img/article/img-article.jpg" alt="">
+									</div>
+									<div class="card-i__title">«Укрнафтобуріння» успішно завершило монтаж та пуск в експлуатацію УШГН свердловини №54 Сахалінського нафтогазоконденсатного родовища</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</secttion>
+		</main>
+		@@include('./components/_footer.html',{})
+	</div>
+	@@include('_js.html',{})
+</body>
+
+</html>

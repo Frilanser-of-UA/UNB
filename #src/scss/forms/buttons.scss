@@ -161,18 +161,89 @@
 	padding: 11px 20px 7px 20px;
 	transition: background-color 0.3s ease-in-out 0s;
 
-	@media (any-hover:hover) {
-		&:hover {
-			background-color: $blue-new;
+	&.heigh-m {
+		height: 54px;
+	}
+
+	&.heigh-s {
+		height: 46px;
+	}
+
+	&.transparent {
+		background-color: transparent;
+		color: $navyblue;
+		font-size: 16px;
+		line-height: 140%;
+		text-transform: none;
+
+		@media (any-hover:hover) {
+			&:hover {
+				background-color: transparent;
+
+				&::before {
+					transform: translateX(0);
+				}
+
+				span {
+					&::before {
+						width: 100%;
+					}
+				}
+			}
+		}
+
+		span {
+			position: relative;
 
 			&::before {
-				transform: rotate(90deg) translateY(-5px);
+				content: '';
+				width: 0%;
+				height: 1px;
+				background-color: $gray-02;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				transition: width 0.3s ease 0s;
+			}
+		}
+
+	}
+
+	&.border {
+		background-color: transparent;
+		color: $navyblue;
+		border: 2px solid #0E273D;
+
+		@media (any-hover:hover) {
+			&:hover {
+				background-color: transparent;
 			}
 		}
 	}
 
+	@media (any-hover:hover) {
+		&:hover {
+			background-color: $blue-new;
+
+			&._icon-arrow {
+				&::before {
+					transform: rotate(90deg) translateY(-5px);
+				}
+			}
+
+			&::before {
+				transform: translateX(5px);
+			}
+		}
+	}
+
+	&._icon-arrow {
+		&::before {
+			transform: rotate(90deg);
+		}
+	}
+
 	&::before {
-		transform: rotate(90deg);
 		font-size: 24px;
 		font-size: 24px;
 		width: 24px;
@@ -181,10 +252,14 @@
 		transition: transform 0.3s linear 0s;
 	}
 
+	&:disabled {
+		pointer-events: none;
+		background: #E3F1FF;
+		color: $gray-02;
+	}
+
 	/* white */
-
 	color: #FFFFFF;
-
 }
 
 .download {

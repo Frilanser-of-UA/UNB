@@ -1,0 +1,15 @@
+.form-block {
+	padding: 25px 0;
+	// .form-block__container
+
+	&__container {}
+
+	// .form-block__body
+
+	&__body {
+		max-width: 723px;
+		margin-left: auto;
+	}
+
+	&__title {}
+}

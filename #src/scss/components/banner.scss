@@ -1,6 +1,17 @@
 .banner {
 
 	// .banner__container
+	&.mob {
+		.banner__img {
+			@media (max-width:($md4+px)) {
+				height: 478px;
+			}
+
+			@media (max-width:($md5+px)) {
+				height: 400px;
+			}
+		}
+	}
 
 	&__container {}
 
@@ -16,7 +27,6 @@
 
 	&__img {
 		padding: 0px 0px 487px 0px;
-
 
 		img {
 			transition: height 0.5s linear 0s;
