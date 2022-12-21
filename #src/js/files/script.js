@@ -346,7 +346,7 @@ if (chatBtnOpen) {
 	})
 }
 
-//FIX ==========================banner===============================
+//FIX banner===============================
 let banner = document.querySelector(".banner");
 let paralaxBox = document.querySelector(".banner__paralax-blok");
 let bannerImg = document.querySelector(".banner__img img");

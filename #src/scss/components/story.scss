@@ -14,18 +14,17 @@
 }
 
 .spollers-story {
-	&.vacancies {}
-
-	// .spollers-story__item
-
-	&__item {
+	&.vacancies {
 		.spollers-story__title {
 			&._active {
 				font-weight: 600;
-
 			}
 		}
 	}
+
+	// .spollers-story__item
+
+	&__item {}
 
 	// .spollers-story__title
 

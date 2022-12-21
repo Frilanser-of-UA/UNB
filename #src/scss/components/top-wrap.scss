@@ -1,6 +1,11 @@
 .top-wrap {
 	background-color: $bg-0;
 	padding: 100px 0 25px 0;
+
+	&.pb--0 {
+		padding-bottom: 0;
+	}
+
 	// .top-wrap__container
 
 	&__container {}

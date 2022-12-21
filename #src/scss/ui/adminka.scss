@@ -447,7 +447,7 @@
 }
 
 .benefits {
-	padding: 50px 0;
+	padding: 25px 0;
 
 	// .benefits__itams
 
@@ -459,7 +459,7 @@
 				font-size: 18px;
 			}
 
-			.item-benefists__title {
+			.item-benefists__text {
 				font-size: 14px;
 			}
 		}
@@ -516,5 +516,48 @@
 
 	@media (max-width:($md3+px)) {
 		padding: 80px 0;
+	}
+}
+
+.iframe--container {
+	position: relative;
+	padding-bottom: calc((817 / 723) * 100%);
+
+	iframe {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		object-fit: cover;
+		scrollbar-width: thin;
+		scrollbar-color: rgba(0, 0, 0, 0.26) $bg-00;
+
+		&::-webkit-scrollbar {
+			width: 10px;
+		}
+
+		&::-webkit-scrollbar-track {
+			background: $bg-00;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background: rgba(0, 0, 0, 0.26);
+			/* цвет бегунка */
+			border-radius: 30px;
+			/* округлось бегунка */
+			border: 3px solid $bg-00;
+			/* отступ вокруг бегунка */
+		}
+	}
+}
+
+.pt--0 {
+	&.text {
+		padding-top: 0;
+	}
+
+	&.news-articles {
+		padding-top: 0;
 	}
 }
