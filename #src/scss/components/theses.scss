@@ -31,7 +31,7 @@
 	&__content {
 		line-height: 140%;
 		display: flex;
-
+		align-items: center;
 		padding: 7.5px 15px;
 		border: 1px solid $bg-3;
 		border-radius: 28px;
@@ -40,6 +40,7 @@
 		@media (max-width:($md4+px)) {
 			padding: 10px 15px;
 			font-size: 18px;
+			align-items: flex-start;
 		}
 
 		&::before {
