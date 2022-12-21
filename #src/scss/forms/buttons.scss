@@ -221,6 +221,16 @@
 		}
 	}
 
+	&.orange {
+		background-color: $darkorange;
+
+		@media (any-hover:hover) {
+			&:hover {
+				background: #BF4A0E;
+			}
+		}
+	}
+
 	@media (any-hover:hover) {
 		&:hover {
 			background-color: $blue-new;

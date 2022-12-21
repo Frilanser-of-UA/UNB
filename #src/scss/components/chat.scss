@@ -239,6 +239,26 @@
 	&__body {
 		flex: 1 1 auto;
 		overflow-y: auto;
+		scrollbar-width: thin;
+		scrollbar-color: rgba(0, 0, 0, 0.26) $bg-00;
+
+		&::-webkit-scrollbar {
+			width: 10px;
+			height: 12px;
+		}
+
+		&::-webkit-scrollbar-track {
+			background: $bg-00;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background: rgba(0, 0, 0, 0.26);
+			/* цвет бегунка */
+			border-radius: 30px;
+			/* округлось бегунка */
+			border: 3px solid $bg-00;
+			/* отступ вокруг бегунка */
+		}
 	}
 
 	&__wrap {

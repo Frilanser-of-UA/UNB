@@ -1,0 +1,51 @@
+.theses {
+	padding: 25px 0;
+	// .theses__container
+
+	&__container {}
+
+	// .theses__body
+
+	&__body {}
+
+	// .theses__items
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		margin: -2.5px;
+
+		@media (max-width:($md4+px)) {
+			display: block;
+		}
+	}
+
+	// .theses__item
+
+	&__item {
+		padding: 2.5px;
+	}
+
+	// .theses__content
+
+	&__content {
+		line-height: 140%;
+		display: flex;
+
+		padding: 7.5px 15px;
+		border: 1px solid $bg-3;
+		border-radius: 28px;
+		min-height: 42px;
+
+		@media (max-width:($md4+px)) {
+			padding: 10px 15px;
+			font-size: 18px;
+		}
+
+		&::before {
+			font-size: 24px;
+			margin: 0px 5px 0px 0px;
+			display: block;
+		}
+	}
+}

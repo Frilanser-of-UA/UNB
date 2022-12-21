@@ -20,6 +20,12 @@
 		justify-content: flex-start;
 	}
 
+	&.cards__line {
+		a {
+			width: auto;
+		}
+	}
+
 	a {
 		@media (max-width:($md3+px)) {
 			width: 100%;
@@ -54,10 +60,9 @@
 	}
 
 	.img--fix {
-		padding: 0px 0px 332px 0px;
-
-		@media (max-width:($md4+px)) {
-			padding: 0px 0px 0 0px;
+		img {
+			position: relative;
+			width: 100%;
 		}
 	}
 
@@ -94,10 +99,9 @@
 	}
 
 	.img--fix {
-		padding: 0px 0px 668px 0px;
-
-		@media (max-width:($md4+px)) {
-			padding: 0px 0px 0 0px;
+		img {
+			position: relative;
+			width: 100%;
 		}
 	}
 
@@ -147,7 +151,7 @@
 
 .grid--text-70 {
 	display: grid;
-	grid-template-columns: 1fr 2fr;
+	grid-template-columns: auto minmax(min-content, 723px);
 	gap: 60px;
 
 	@media (max-width:($md2+px)) {
@@ -177,10 +181,9 @@
 	}
 
 	.img--fix {
-		padding: 0px 0px 500px 0px;
-
-		@media (max-width:($md4+px)) {
-			padding: 0px 0px 0 0px;
+		img {
+			position: relative;
+			width: 100%;
 		}
 	}
 
@@ -285,16 +288,20 @@
 	@media (max-width:($md5+px)) {
 		display: block;
 	}
+
+	&.gap--card {
+		gap: 40px 20px;
+
+		@media (max-width:($md4+px)) {
+			gap: 25px 15px;
+		}
+	}
 }
 
 .left--70 {
 	max-width: 723px;
 	margin-left: auto;
 }
-
-
-
-
 
 // FIX ============= Контейнер текстового редактора  ============= 
 
@@ -362,7 +369,7 @@
 		font-size: 16px;
 
 		p {
-			line-height: 120%;
+			line-height: 140%;
 			padding: 0px 0px 15px 0px;
 
 			i {
@@ -371,7 +378,7 @@
 		}
 
 		a {
-			line-height: 120%;
+			line-height: 140%;
 			padding: 0px 0px 10px 0px;
 		}
 
@@ -492,16 +499,11 @@
 }
 
 .text-img {
-	padding: 100px 0;
-
-	@media (max-width:($md3+px)) {
-		padding: 80px 0;
-	}
+	padding: 25px 0;
 
 	&__body {}
 
-	&__img {
-
+	&__left {
 		@media (max-width:($md4+px)) {
 			height: 450px;
 		}

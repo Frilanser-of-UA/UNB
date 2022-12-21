@@ -50,6 +50,27 @@
 		}
 	}
 
+	// .popup_team
+
+	&_team {
+		.popup__close {
+			top: 15px;
+			right: 15px;
+		}
+
+		.popup__body {
+			background-color: $bg-0;
+			border: none;
+			padding: 60px 30px;
+			border-radius: 0;
+			max-width: 680px;
+
+			@media (max-width:($md4+px)) {
+				padding: 60px 20px;
+			}
+		}
+	}
+
 	// .popup__content
 	&__content {
 		display: flex;
@@ -250,8 +271,115 @@
 	order: 1;
 }
 
-.input {}
+.team-popup {
+	display: flex;
 
+	@media (max-width:($md4+px)) {
+		display: block;
+	}
+
+	// .team-popup__left
+
+	&__left {
+		margin: 0px 30px 0px 0px;
+		flex: 0 0 140px;
+
+		@media (max-width:($md4+px)) {
+			display: flex;
+			margin: 0px 0px 30px 0px;
+		}
+
+		.team-popup__title {
+			display: none;
+
+			@media (max-width:($md4+px)) {
+				display: block;
+			}
+		}
+
+		.team-popup__label {
+			display: none;
+
+			@media (max-width:($md4+px)) {
+				display: block;
+			}
+		}
+	}
+
+	// .team-popup__wrap
+
+	&__wrap {
+		@media (max-width:($md4+px)) {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+		}
+	}
+
+	// .team-popup__img
+
+	&__img {
+		@media (max-width:($md4+px)) {
+			flex: 0 0 140px;
+			margin: 0px 10px 0px 0px;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+
+	// .team-popup__right
+
+	&__right {
+		@media (max-width:($md4+px)) {
+			.team-popup__title {
+				display: none;
+			}
+
+			.team-popup__label {
+				display: none;
+			}
+		}
+	}
+
+	// .team-popup__title
+
+	&__title {
+		font-weight: 500;
+		font-size: 22px;
+		line-height: 120%;
+		letter-spacing: -0.01em;
+		color: $bg-dark;
+		padding: 0px 0px 5px 0px;
+	}
+
+	// .team-popup__label
+
+	&__label {
+		line-height: 120%;
+		letter-spacing: -0.01em;
+		margin: 0px 0px 15px 0px;
+
+		@media (max-width:($md4+px)) {
+			margin: 0;
+		}
+	}
+
+	// .team-popup__text
+
+	&__text {
+		p {
+			font-size: 14px;
+			line-height: 140%;
+			padding: 0px 0px 15px 0px;
+
+			@media (max-width:($md4+px)) {
+				font-size: 18px;
+			}
+		}
+	}
+}
 
 //====================================================================================================
 //====================================================================================================
