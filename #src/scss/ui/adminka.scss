@@ -365,8 +365,32 @@
 		}
 	}
 
+	&.mob {
+		@media (max-width:($md4+px)) {
+			font-size: 20px;
+
+			p {
+				i {
+					font-size: 22px;
+				}
+			}
+		}
+	}
+
 	&.normal {
 		font-size: 16px;
+
+		&.mob {
+			@media (max-width:($md4+px)) {
+				font-size: 20px;
+
+				p {
+					i {
+						font-size: 22px;
+					}
+				}
+			}
+		}
 
 		p {
 			line-height: 140%;

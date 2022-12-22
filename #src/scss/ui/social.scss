@@ -1,0 +1,36 @@
+.social {
+	display: flex;
+
+	a {
+		flex: 0 0 40px;
+		width: 40px;
+		height: 40px;
+		border: 1px solid $bg-3;
+		border-radius: 25px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: color 0.3s ease 0s, border-color 0.3s ease 0s, transform 0.3s cubic-bezier(0.33, 1, 0.68, 1) 0s;
+		color: $navyblue;
+
+		&::before {
+			font-size: 24px;
+		}
+
+		&._icon-twitter {
+			&::before {
+				font-size: 16px;
+			}
+		}
+
+		&:not(:last-child) {
+			margin: 0px 4px 0px 0px;
+		}
+
+		@media (any-hover:hover) {
+			&:hover {
+				transform: translateY(-3px);
+			}
+		}
+	}
+}

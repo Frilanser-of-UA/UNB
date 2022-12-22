@@ -1,4 +1,9 @@
 .banner {
+	&.article {
+		.banner__container {
+			max-width: 900px;
+		}
+	}
 
 	// .banner__container
 	&.mob {

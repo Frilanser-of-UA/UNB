@@ -231,6 +231,34 @@
 		}
 	}
 
+	&.revers-simple {
+		flex-direction: row;
+		padding: 0px 0px 0px 5px;
+		background-color: transparent;
+		color: $navyblue;
+
+		@media (any-hover:hover) {
+			&:hover {
+				background-color: transparent;
+
+				&._icon-arrow {
+					&::before {
+						transform: rotate(-90deg) translateY(-5px);
+					}
+				}
+			}
+		}
+
+		&._icon-arrow {
+			&::before {
+				transform: rotate(-90deg);
+				margin: 0px 5px 0px 0px;
+			}
+
+		}
+
+	}
+
 	@media (any-hover:hover) {
 		&:hover {
 			background-color: $blue-new;

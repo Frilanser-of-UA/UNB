@@ -209,6 +209,10 @@
   content: "\e922";
 }
 
+._icon-twitter:before {
+  content: "\e923";
+}
+
 * {
   padding: 0px;
   margin: 0px;
@@ -532,6 +536,24 @@ body._lock {
   .gas-btn.orange:hover {
     background: #BF4A0E;
   }
+}
+.gas-btn.revers-simple {
+  flex-direction: row;
+  padding: 0px 0px 0px 5px;
+  background-color: transparent;
+  color: #0E273D;
+}
+@media (any-hover: hover) {
+  .gas-btn.revers-simple:hover {
+    background-color: transparent;
+  }
+  .gas-btn.revers-simple:hover._icon-arrow::before {
+    transform: rotate(-90deg) translateY(-5px);
+  }
+}
+.gas-btn.revers-simple._icon-arrow::before {
+  transform: rotate(-90deg);
+  margin: 0px 5px 0px 0px;
 }
 @media (any-hover: hover) {
   .gas-btn:hover {
@@ -1378,8 +1400,24 @@ input[type=password] {
   font-size: 16px;
   line-height: 140%;
 }
+@media (max-width: 640px) {
+  .text--editor.mob {
+    font-size: 20px;
+  }
+  .text--editor.mob p i {
+    font-size: 22px;
+  }
+}
 .text--editor.normal {
   font-size: 16px;
+}
+@media (max-width: 640px) {
+  .text--editor.normal.mob {
+    font-size: 20px;
+  }
+  .text--editor.normal.mob p i {
+    font-size: 22px;
+  }
 }
 .text--editor.normal p {
   line-height: 140%;
@@ -2957,6 +2995,36 @@ body.ie ._ibg img {
 @media (max-width: 768px) {
   .item-benefists__text {
     font-size: 14px;
+  }
+}
+
+.social {
+  display: flex;
+}
+.social a {
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #B2D6FF;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease 0s, border-color 0.3s ease 0s, transform 0.3s cubic-bezier(0.33, 1, 0.68, 1) 0s;
+  color: #0E273D;
+}
+.social a::before {
+  font-size: 24px;
+}
+.social a._icon-twitter::before {
+  font-size: 16px;
+}
+.social a:not(:last-child) {
+  margin: 0px 4px 0px 0px;
+}
+@media (any-hover: hover) {
+  .social a:hover {
+    transform: translateY(-3px);
   }
 }
 
@@ -7284,6 +7352,9 @@ body.ie ._ibg img {
   line-height: 120%;
 }
 
+.banner.article .banner__container {
+  max-width: 900px;
+}
 @media (max-width: 640px) {
   .banner.mob .banner__img {
     height: 478px;
@@ -8414,6 +8485,129 @@ body.ie ._ibg img {
 .theses__content::before {
   font-size: 24px;
   margin: 0px 5px 0px 0px;
+  display: block;
+}
+
+.share {
+  padding: 30px 0px 0px 0px;
+}
+.share.non--title {
+  padding: 25px 0;
+}
+.share.non--title .share__line {
+  display: block;
+}
+.share.non--title .share__line .gas-btn {
+  position: static;
+}
+.share__body {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 100px;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .share__body {
+    padding: 0;
+  }
+}
+.share__top .gas-btn {
+  position: absolute;
+  left: -20px;
+  top: 0;
+}
+@media (max-width: 1200px) {
+  .share__top .gas-btn {
+    left: 0;
+  }
+  .share__top .gas-btn span {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .share__top .gas-btn {
+    position: static;
+    margin: 0px 0px 26px 0px;
+  }
+}
+.share__title {
+  padding: 0px 0px 25px 0px;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+}
+@media (max-width: 640px) {
+  .share__title {
+    font-size: 26px;
+  }
+}
+.share__bottom {
+  padding: 15px 0;
+  border-top: 1px solid #0E273D;
+}
+.share__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.share__line {
+  display: none;
+}
+.share__label {
+  font-size: 14px;
+  line-height: 120%;
+}
+.share__label.blue {
+  color: #60A4F1;
+}
+.article {
+  padding: 15px 0px 0px 0px;
+}
+.article__body {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.article__table {
+  padding: 15px 0;
+  overflow: auto;
+}
+.article__table table {
+  text-align: left;
+  border-collapse: collapse;
+  width: 700px;
+}
+.article__table th,
+.article__table td {
+  border: 1px solid #B2D6FF;
+  border-left: none;
+  border-right: none;
+  width: 83px;
+}
+.article__table th:first-child,
+.article__table td:first-child {
+  width: 126px;
+}
+.article__table th {
+  font-weight: 700;
+  line-height: 114%;
+  padding: 10px 0;
+}
+.article__table th:not(:last-child) {
+  padding: 10px 15px 10px 0px;
+}
+.article__table td {
+  padding: 10px 0;
+  line-height: 114%;
+}
+.article__table td:not(:last-child) {
+  padding: 10px 15px 10px 0px;
+}
+.article__img {
+  padding: 10px 0;
+}
+.article__img img {
+  width: 100%;
   display: block;
 }
 
