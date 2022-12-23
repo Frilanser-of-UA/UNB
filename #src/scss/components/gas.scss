@@ -17,6 +17,12 @@
 		margin: 0px 0px 30px 0px;
 	}
 
+	&__text {
+		padding: 0px 0px 20px 0px;
+		line-height: 120%;
+		max-width: 700px;
+	}
+
 	// .gas__nav
 
 	&__nav {}
@@ -194,5 +200,73 @@
 		&.visible {
 			display: block;
 		}
+	}
+}
+
+.finish {
+	padding: 0px 0px 60px 0px;
+
+	@media (max-width:($md4+px)) {
+		padding: 0px 0px 30px 0px;
+	}
+
+	@media (max-width:($md5+px)) {
+		padding: 0px 0px 15px 0px;
+	}
+
+	// .finish__body
+
+	&__body {
+		padding: 20px;
+		background: $bg-00;
+		border: 2px solid $bg-2;
+		border-radius: 20px;
+	}
+
+	// .finish__title
+
+	&__title {
+		font-size: 21px;
+		line-height: 120%;
+		letter-spacing: -0.045em;
+		color: $gray-02;
+		padding: 0px 0px 15px 0px;
+	}
+
+	// .finish__content
+
+	&__content {}
+
+	// .finish__item
+
+	&__item {
+		display: flex;
+		padding: 9px 0;
+		border-top: 1px solid $bg-2;
+		align-items: center;
+
+		@media (max-width:($md4+px)) {
+			display: block;
+		}
+	}
+
+	// .finish__label
+
+	&__label {
+		flex: 0 1 239px;
+		margin: 0px 30px 0px 0px;
+		line-height: 120%;
+
+		@media (max-width:($md4+px)) {
+			font-size: 14px;
+			margin: 0px 0px 3px 0px;
+		}
+	}
+
+	// .finish__text
+
+	&__text {
+		font-size: 18px;
+		line-height: 120%;
 	}
 }

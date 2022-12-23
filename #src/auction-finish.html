@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ua">
+@@include('_head.html',{
+"title":"Аукціон завершено"
+})
+
+<body>
+	<div class="wrapper">
+		<header class="header header_bg-1">
+			@@include('./components/_header.html',{})
+		</header>
+		<main class="page">
+			<section class="page__gas gas">
+				<div class="gas__top">
+					<div class="gas__container _container">
+						<h2 class="gas__title title-gas">Конденсат газовый 200т</h2>
+						<div class="gas__text">Проводимо геологорозвідувальні роботи і промислову розробку вуглеводнів Сахалінського родовища відповідно до спеціального дозволу терміном на 20 років.</div>
+						@@include('./components/_gas-nav.html',{
+						"webRoot":"http://andreyfront.owlweb.com.ua/unb/auction-ban-v2.html"
+						})
+					</div>
+				</div>
+				<div class="gas__body">
+					<div class="gas__container _container">
+						<div class="gas__breadcrumbs breadcrumbs"></div>
+						<div class="auction-user">
+							<div class="auction-user__container">
+								<div class="auction-user__left">
+									<div class="auction-user__finish finish">
+										<div class="finish__body">
+											<div class="finish__title">Аукціон завершено</div>
+											<div class="finish__content">
+												<div class="finish__item">
+													<div class="finish__label">Назва аукціону</div>
+													<div class="finish__text">Конденсат газовый 200т</div>
+												</div>
+												<div class="finish__item">
+													<div class="finish__label">Дата</div>
+													<div class="finish__text">10.01.2022</div>
+												</div>
+												<div class="finish__item">
+													<div class="finish__label">Кіль-ть учасників</div>
+													<div class="finish__text">13</div>
+												</div>
+												<div class="finish__item">
+													<div class="finish__label">Кіль-ть переможців</div>
+													<div class="finish__text">3</div>
+												</div>
+												<div class="finish__item">
+													<div class="finish__label">Реалізовано, (т)</div>
+													<div class="finish__text">200</div>
+												</div>
+												<div class="finish__item">
+													<div class="finish__label">Середня ціна реалізації, (грн/т з ПДВ)</div>
+													<div class="finish__text">20 700, 00</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									@@include('./components/_links.html',{})
+								</div>
+								<div class="auction-user__right">
+									<div class="auction-user__info info" data-da=".auction-user__left,1024,1">
+										<div class="info__sublabel info__sublabel_padding">Xарактеристики лоту:</div>
+										<div class="info__content">
+											<div class="info__visible">
+												<div class="info__item">
+													<div class="info__sublabel">Стартова ціна:</div>
+													<div class="info__index">20 900 грн/т</div>
+												</div>
+												<div class="info__item">
+													<div class="info__sublabel">Условия оплаты:</div>
+													<div class="info__index">100% предварительная оплата</div>
+												</div>
+												<div class="info__item">
+													<div class="info__sublabel">Период оплаты:</div>
+													<div class="info__index">с 20.01.2022 по 21.01.2022 </div>
+												</div>
+												<div class="info__item">
+													<div class="info__sublabel">Период вывоза:</div>
+													<div class="info__index">с 20.01.2022 по 23.01.2022 </div>
+												</div>
+											</div>
+											<div class="info__show">
+												<div class="info__item">
+													<div class="info__sublabel">Стартова ціна:</div>
+													<div class="info__index">20 900 грн/т</div>
+												</div>
+												<div class="info__item">
+													<div class="info__sublabel">Условия оплаты:</div>
+													<div class="info__index">100% предварительная оплата</div>
+												</div>
+												<div class="info__item">
+													<div class="info__sublabel">Период оплаты:</div>
+													<div class="info__index">с 20.01.2022 по 21.01.2022 </div>
+												</div>
+												<div class="info__item">
+													<div class="info__sublabel">Период вывоза:</div>
+													<div class="info__index">с 20.01.2022 по 23.01.2022 </div>
+												</div>
+											</div>
+											<button class="info__button _icon-triangle _show"><span>Показати більше</span><span>Згорнути</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('./components/_footer.html',{})
+	</div>
+	@@include('./components/_popup.html',{})
+	@@include('_js.html',{})
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ua">
+@@include('_head.html',{
+"title":"Error"
+})
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			@@include('./components/_header.html',{})
+		</header>
+		<main class="page">
+			<!-- =====================error==================== -->
+			<section class="error">
+				<div class="error__container _container">
+					<div class="error__body">
+						<div class="error__num">404</div>
+						<div class="error__title">
+							<h1>Дуже шкода :( Сторінки, яку ви шукаєте, не існує.</h1>
+						</div>
+						<div class="error__text">Це могло статися, бо ми свідомо видалили сторінку або якщо ви допустились помилки вводячи адресу сторінки в адресному рядку.</div>
+						<div class="error__line">
+							<a href="#" target="_blank" class="gas-btn heigh-m _icon-arrow-right-up">На головну</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- =================================================== -->
+		</main>
+		@@include('./components/_footer.html',{})
+	</div>
+	@@include('_js.html',{})
+</body>
+
+</html>

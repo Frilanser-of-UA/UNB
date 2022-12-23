@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ua">
+@@include('_head.html',{
+"title":"Аукціон завершено"
+})
+
+<body>
+	<div class="wrapper">
+		<header class="header header_bg-1">
+			@@include('./components/_header.html',{})
+		</header>
+		<main class="page">
+			<section class="page__gas gas">
+				<div class="gas__top">
+					<div class="gas__container _container">
+						<h2 class="gas__title title-gas">Газовий конденсат. Аукціони</h2>
+						<div class="gas__text">Проводимо геологорозвідувальні роботи і промислову розробку вуглеводнів Сахалінського родовища відповідно до спеціального дозволу терміном на 20 років.</div>
+						@@include('./components/_gas-nav.html',{
+						"webRoot":"http://andreyfront.owlweb.com.ua/unb/auction-ban-v2.html"
+						})
+					</div>
+				</div>
+				<div class="gas__body">
+					<div class="gas__container _container">
+						<div class="gas__breadcrumbs breadcrumbs"></div>
+						<div class="dasboard-info">🔥Тут поки немає аукціонів</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('./components/_footer.html',{})
+	</div>
+	@@include('./components/_popup.html',{})
+	@@include('_js.html',{})
+</body>
+
+</html>
