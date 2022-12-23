@@ -32,5 +32,11 @@
 	&__line {
 		margin: 25px 0px 0px 0px;
 		text-align: right;
+
+		@media (max-width:($md5+px)) {
+			.gas-btn {
+				width: 100%;
+			}
+		}
 	}
 }

@@ -8698,6 +8698,11 @@ body.ie ._ibg img {
   margin: 25px 0px 0px 0px;
   text-align: right;
 }
+@media (max-width: 375px) {
+  .error__line .gas-btn {
+    width: 100%;
+  }
+}
 
 .page {
   flex: 1 1 auto;
