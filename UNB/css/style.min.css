@@ -482,6 +482,9 @@ body._lock {
   /* white */
   color: #FFFFFF;
 }
+.gas-btn.heigh-l {
+  height: 80px;
+}
 .gas-btn.heigh-m {
   height: 54px;
 }
@@ -2695,6 +2698,29 @@ body.ie ._ibg img {
     padding: 60px 20px;
   }
 }
+.popup_order-form .popup__title {
+  font-size: 24px;
+  padding: 0px 0px 15px 0px;
+}
+.popup_order-form .popup__body {
+  padding: 30px;
+}
+.popup_order-form .popup__form {
+  padding: 10px 0px 0px 0px;
+}
+.popup_order-form .popup__form .form-popup__line {
+  padding: 0;
+}
+.popup_order-form .popup__form .form-popup__line:not(:first-child) {
+  margin: 15px 0px 0px 0px;
+}
+.popup_order-form .popup__form .form-popup__label {
+  padding: 0px 0px 0px 8px;
+  margin: 0px 0px 5px 0px;
+}
+.popup_saccess .popup__body {
+  padding: 30px;
+}
 .popup__content {
   display: flex;
   flex-direction: column;
@@ -2804,6 +2830,50 @@ body.ie ._ibg img {
 .form-popup__input._error ~ .form-popup__label .tooltip__icon {
   color: #D94F6E;
 }
+.form-popup__input-2 {
+  padding: 0px 20px 0px 20px;
+  letter-spacing: -0.01em;
+  width: 100%;
+  height: 50px;
+  font-size: 20px;
+  border-radius: 33px;
+  background-color: #FFFFFF;
+  outline: 1px solid #D3E8FF;
+  transition: all 0.2s ease 0s;
+  cursor: pointer;
+  order: 2;
+}
+@media (any-hover: hover) {
+  .form-popup__input-2:hover {
+    outline: 1px solid #A1C8F2;
+  }
+}
+.form-popup__input-2:focus {
+  outline: 3px solid #A1C8F2;
+}
+.form-popup__input-2:focus ~ .form-popup__label {
+  color: #5E7488;
+}
+.form-popup__input-2::placeholder {
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  color: #A9BDCE;
+}
+.form-popup__input-2._error {
+  outline: 1px solid #E5879C;
+}
+@media (any-hover: hover) {
+  .form-popup__input-2._error:hover {
+    outline: 1px solid #D94F6E;
+  }
+}
+.form-popup__input-2._error:focus {
+  outline: 3px solid #E5879C;
+}
+.form-popup__input-2._error ~ .form-popup__label {
+  color: #D94F6E;
+}
 .form-popup__calck {
   padding: 15px 30px 0px 30px;
   margin: 0px 0px 50px 0px;
@@ -2811,6 +2881,10 @@ body.ie ._ibg img {
   font-size: 13px;
   line-height: 110%;
   text-transform: uppercase;
+}
+.form-popup__wrap {
+  padding: 20px 0px 0px 0px;
+  text-align: right;
 }
 .form-popup__btn {
   padding: 21.5px 0px;
@@ -2929,6 +3003,31 @@ body.ie ._ibg img {
   .team-popup__text p {
     font-size: 18px;
   }
+}
+
+.saccess__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.saccess__icon {
+  font-size: 24px;
+  margin: 10px 0px 10px 0px;
+}
+.saccess__title {
+  margin: 0px 0px 10px 0px;
+  font-size: 24px;
+  line-height: 120%;
+  color: #0B1F31;
+}
+.saccess__text {
+  font-size: 15px;
+  line-height: 120%;
+  margin: 0px 0px 30px 0px;
+}
+.saccess__wrap .gas-btn {
+  width: 163px;
 }
 
 .links__link {

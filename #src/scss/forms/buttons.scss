@@ -161,6 +161,10 @@
 	padding: 11px 20px 7px 20px;
 	transition: background-color 0.3s ease-in-out 0s;
 
+	&.heigh-l {
+		height: 80px;
+	}
+
 	&.heigh-m {
 		height: 54px;
 	}
