@@ -149,6 +149,7 @@
 }
 
 .gas-btn {
+	color: $white;
 	background-color: $bg-7;
 	border-radius: 121px;
 	font-weight: 500;
@@ -163,6 +164,8 @@
 
 	&.heigh-l {
 		height: 80px;
+		padding: 11px 25px 7px 25px;
+		font-size: 20px;
 	}
 
 	&.heigh-m {
@@ -179,14 +182,11 @@
 		font-size: 16px;
 		line-height: 140%;
 		text-transform: none;
+		position: relative;
 
 		@media (any-hover:hover) {
 			&:hover {
 				background-color: transparent;
-
-				&::before {
-					transform: translateX(0);
-				}
 
 				span {
 					&::before {
@@ -196,21 +196,47 @@
 			}
 		}
 
+		&::before {
+			margin: 0px 0px 0px 5px;
+		}
+
 		span {
 			position: relative;
 
 			&::before {
 				content: '';
-				width: 0%;
-				height: 1px;
-				background-color: $gray-02;
-				position: absolute;
 				bottom: 0;
 				left: 0;
+				width: 0;
 				transition: width 0.3s ease 0s;
+				height: 1px;
+				position: absolute;
+				background-color: $gray-02;
 			}
 		}
 
+		&.heigh-l {
+			height: 59px;
+			font-size: 20px;
+			padding: 11px 20px 7px 20px;
+		}
+
+		&.revers {
+			flex-direction: row;
+
+			&::before {
+				margin: 0px 5px 0px 0px;
+
+			}
+		}
+
+		&.disabled {
+			background-color: transparent;
+		}
+
+		&:disabled {
+			background-color: transparent;
+		}
 	}
 
 	&.border {
@@ -225,6 +251,42 @@
 		}
 	}
 
+	&.border-bold {
+		background-color: transparent;
+		border: 4px solid #4A98F7;
+		color: $navyblue;
+
+		&.gradient {
+			border-color: transparent;
+			position: relative;
+			border: 4px solid transparent;
+			background: linear-gradient($bg-0, $bg-0) padding-box, linear-gradient(310.24deg, #eb5f62 7.76%, #db7131 87.94%) border-box;
+			transition: all 0.3s ease 0s;
+
+			@media (any-hover:hover) {
+				&:hover {
+					background: linear-gradient(310.24deg, #EB5F62 7.76%, #DB7131 87.94%) padding-box, linear-gradient(310.24deg, #eb5f62 7.76%, #db7131 87.94%) border-box;
+				}
+			}
+		}
+
+		&.disabled {
+			background: $bg-0;
+			border-color: $bg-0;
+		}
+
+		&:disabled {
+			background-color: $bg-0;
+			border-color: $bg-0;
+		}
+
+		@media (any-hover:hover) {
+			&:hover {
+				color: $white;
+			}
+		}
+	}
+
 	&.orange {
 		background-color: $darkorange;
 
@@ -235,11 +297,23 @@
 		}
 	}
 
+	&.white {
+		background-color: $white;
+		color: $navyblue;
+
+		@media (any-hover:hover) {
+			&:hover {
+				background-color: $bg-2;
+			}
+		}
+	}
+
 	&.revers-simple {
 		flex-direction: row;
 		padding: 0px 0px 0px 5px;
 		background-color: transparent;
 		color: $navyblue;
+		text-transform: none;
 
 		@media (any-hover:hover) {
 			&:hover {
@@ -263,19 +337,11 @@
 
 	}
 
+	&.border-bold {}
+
 	@media (any-hover:hover) {
 		&:hover {
 			background-color: $blue-new;
-
-			&._icon-arrow {
-				&::before {
-					transform: rotate(90deg) translateY(-5px);
-				}
-			}
-
-			&::before {
-				transform: translateX(5px);
-			}
 		}
 	}
 
@@ -298,10 +364,15 @@
 		pointer-events: none;
 		background: #E3F1FF;
 		color: $gray-02;
+		border-color: #E3F1FF;
 	}
 
-	/* white */
-	color: #FFFFFF;
+	&.disabled {
+		border-color: #E3F1FF;
+		pointer-events: none;
+		background: #E3F1FF;
+		color: $gray-02;
+	}
 }
 
 .download {

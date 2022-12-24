@@ -468,6 +468,7 @@ body._lock {
 }
 
 .gas-btn {
+  color: #FFFFFF;
   background-color: #60A4F1;
   border-radius: 121px;
   font-weight: 500;
@@ -479,11 +480,11 @@ body._lock {
   flex-direction: row-reverse;
   padding: 11px 20px 7px 20px;
   transition: background-color 0.3s ease-in-out 0s;
-  /* white */
-  color: #FFFFFF;
 }
 .gas-btn.heigh-l {
   height: 80px;
+  padding: 11px 25px 7px 25px;
+  font-size: 20px;
 }
 .gas-btn.heigh-m {
   height: 54px;
@@ -497,30 +498,48 @@ body._lock {
   font-size: 16px;
   line-height: 140%;
   text-transform: none;
+  position: relative;
 }
 @media (any-hover: hover) {
   .gas-btn.transparent:hover {
     background-color: transparent;
   }
-  .gas-btn.transparent:hover::before {
-    transform: translateX(0);
-  }
   .gas-btn.transparent:hover span::before {
     width: 100%;
   }
+}
+.gas-btn.transparent::before {
+  margin: 0px 0px 0px 5px;
 }
 .gas-btn.transparent span {
   position: relative;
 }
 .gas-btn.transparent span::before {
   content: "";
-  width: 0%;
-  height: 1px;
-  background-color: #8494A2;
-  position: absolute;
   bottom: 0;
   left: 0;
+  width: 0;
   transition: width 0.3s ease 0s;
+  height: 1px;
+  position: absolute;
+  background-color: #8494A2;
+}
+.gas-btn.transparent.heigh-l {
+  height: 59px;
+  font-size: 20px;
+  padding: 11px 20px 7px 20px;
+}
+.gas-btn.transparent.revers {
+  flex-direction: row;
+}
+.gas-btn.transparent.revers::before {
+  margin: 0px 5px 0px 0px;
+}
+.gas-btn.transparent.disabled {
+  background-color: transparent;
+}
+.gas-btn.transparent:disabled {
+  background-color: transparent;
 }
 .gas-btn.border {
   background-color: transparent;
@@ -532,6 +551,36 @@ body._lock {
     background-color: transparent;
   }
 }
+.gas-btn.border-bold {
+  background-color: transparent;
+  border: 4px solid #4A98F7;
+  color: #0E273D;
+}
+.gas-btn.border-bold.gradient {
+  border-color: transparent;
+  position: relative;
+  border: 4px solid transparent;
+  background: linear-gradient(#F0F7FF, #F0F7FF) padding-box, linear-gradient(310.24deg, #eb5f62 7.76%, #db7131 87.94%) border-box;
+  transition: all 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+  .gas-btn.border-bold.gradient:hover {
+    background: linear-gradient(310.24deg, #EB5F62 7.76%, #DB7131 87.94%) padding-box, linear-gradient(310.24deg, #eb5f62 7.76%, #db7131 87.94%) border-box;
+  }
+}
+.gas-btn.border-bold.disabled {
+  background: #F0F7FF;
+  border-color: #F0F7FF;
+}
+.gas-btn.border-bold:disabled {
+  background-color: #F0F7FF;
+  border-color: #F0F7FF;
+}
+@media (any-hover: hover) {
+  .gas-btn.border-bold:hover {
+    color: #FFFFFF;
+  }
+}
 .gas-btn.orange {
   background-color: #D5642A;
 }
@@ -540,11 +589,21 @@ body._lock {
     background: #BF4A0E;
   }
 }
+.gas-btn.white {
+  background-color: #FFFFFF;
+  color: #0E273D;
+}
+@media (any-hover: hover) {
+  .gas-btn.white:hover {
+    background-color: #D3E8FF;
+  }
+}
 .gas-btn.revers-simple {
   flex-direction: row;
   padding: 0px 0px 0px 5px;
   background-color: transparent;
   color: #0E273D;
+  text-transform: none;
 }
 @media (any-hover: hover) {
   .gas-btn.revers-simple:hover {
@@ -562,12 +621,6 @@ body._lock {
   .gas-btn:hover {
     background-color: #4A98F6;
   }
-  .gas-btn:hover._icon-arrow::before {
-    transform: rotate(90deg) translateY(-5px);
-  }
-  .gas-btn:hover::before {
-    transform: translateX(5px);
-  }
 }
 .gas-btn._icon-arrow::before {
   transform: rotate(90deg);
@@ -581,6 +634,13 @@ body._lock {
   transition: transform 0.3s linear 0s;
 }
 .gas-btn:disabled {
+  pointer-events: none;
+  background: #E3F1FF;
+  color: #8494A2;
+  border-color: #E3F1FF;
+}
+.gas-btn.disabled {
+  border-color: #E3F1FF;
   pointer-events: none;
   background: #E3F1FF;
   color: #8494A2;
