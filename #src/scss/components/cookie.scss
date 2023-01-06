@@ -1,0 +1,72 @@
+.cookie {
+	position: fixed;
+	z-index: 5;
+	bottom: 32px;
+	left: 10px;
+	width: 320px;
+	background-color: $bg-00;
+	padding: 20px 30px;
+
+	@media (max-width:($md4+px)) {
+		width: 100%;
+		left: 0;
+		bottom: 0;
+	}
+
+	// .cookie__body
+
+	&__body {}
+
+	// .cookie__title
+
+	&__title {
+		font-size: 18px;
+		line-height: 22px;
+		padding: 0px 0px 10px 0px;
+		color: $navyblue;
+	}
+
+	// .cookie__text
+
+	&__text {
+		font-size: 13px;
+		line-height: 16px;
+		color: $gray-03;
+
+		@media (max-width:($md4+px)) {
+			font-size: 16px;
+			line-height: 19px;
+		}
+
+		a {
+			color: $blue-new;
+			text-decoration: underline;
+		}
+	}
+
+	// .cookie__line
+
+	&__line {
+		padding: 15px 0px 0px 0px;
+
+		text-align: right;
+
+		.gas-btn {
+			&.heigh-s {
+				@media (max-width:($md4+px)) {
+					height: 54px;
+				}
+			}
+		}
+	}
+
+	// .cookie__cloze
+
+	&__cloze {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		color: $gray-01;
+		font-size: 24px;
+	}
+}

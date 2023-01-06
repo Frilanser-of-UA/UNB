@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ua">
+@@include('_head.html',{
+"title":"Cookie"
+})
+
+<body>
+	<div class="wrapper">
+		<header class="header header_bg-1">
+			@@include('./components/_header.html',{})
+		</header>
+		<main class="page">
+		</main>
+		@@include('./components/_footer.html',{})
+	</div>
+	<div class="cookie">
+		<div class="cookie__body">
+			<div class="cookie__title">Файли Cookie</div>
+			<div class="cookie__text">
+				<p>Користуючись цим веб-сайтом, ви погоджуєтеся зберігати файли cookie на вашому пристрої для покращення навігації сайтом, аналізу використання сайту та допомоги в наших маркетингових зусиллях. Перегляньте нашу <a href="#" target="_blank">Політику конфіденційності</a> для отримання додаткової інформації.</p>
+			</div>
+			<div class="cookie__line">
+				<a href="#" class="gas-btn heigh-s"><span>Пийняти Cookie</span></a>
+			</div>
+			<button type="button" class="cookie__cloze _icon-close"></button>
+
+		</div>
+	</div>
+	@@include('_js.html',{})
+</body>
+
+</html>
