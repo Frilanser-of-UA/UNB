@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ua">
 <head>
-	<title>Аукціон не користувач</title>
+	<title>Аукціон-ставки</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<link rel="stylesheet" href="css/vendors.min.css">
@@ -103,13 +103,13 @@
 </div>
 		</header>
 		<main class="page">
-			<section class="page__gas gas">
+			<section class="gas">
 				<div class="gas__top">
 					<div class="gas__container _container">
 						<h2 class="gas__title title-gas">Газовий конденсат. Аукціони</h2>
 						<nav class="gas__nav nav">
 	<ul class="nav__list">
-		<li class="nav__item"><a href="http://andreyfront.owlweb.com.ua/unb/auction-notuser.html" class="nav__link">Поточні торги</a></li>
+		<li class="nav__item"><a href="http://andreyfront.owlweb.com.ua/unb/auction-user.html" class="nav__link">Поточні торги</a></li>
 		<li class="nav__item"><a href="http://andreyfront.owlweb.com.ua/unb/certificate.html" class="nav__link">Сертифікати</a></li>
 		<li class="nav__item"><a href="http://andreyfront.owlweb.com.ua/unb/results.html" class="nav__link">Результати минулих аукціонів</a></li>
 		<li class="nav__item"><a href="#" class="nav__link">Як це працює?</a></li>
@@ -126,10 +126,10 @@
 								<div class="auction-user__left">
 									<div class="auction-user__price price">
 										<div class="price__body">
-											<div class="price__pricelabel price__pricelabel_bg-color">
+											<div class="price__pricelabel">
 												<div class="price__wrapper">
 													<div class="price__row">
-														<div class="price__volume" data-price="35000">40000</div>
+														<div class="price__volume" data-price="40001">40000</div>
 														<div class="price__item">
 															<div class="price__tooltip tooltip_position tooltip">
 																<div class="tooltip__icon _icon-warning"></div>
@@ -148,18 +148,94 @@
 												</div>
 											</div>
 											<div class="price__buttons">
-												<div class="price__button price__button_bg-color">
-													<a href="http://andreyfront.owlweb.com.ua/unb/registration.html"><span class="_icon-arrow">Зареєструватись</span></a>
+												<div class="price__button">
+													<div class="price__tooltip tooltip">
+														<div class="tooltip__icon _icon-warning"></div>
+														<div class="tooltip__body">
+															<p>🔥Щоб підвищіти шанси на перемогу, вкажіть бажаний обсяг та запропонуйте свою ціну</p>
+														</div>
+													</div>
+													<a href="#callback-bid" class="bid _popup-link"><span class="_icon-arrow">зробити ставку</span><span class="_icon-chevron">Ставку зроблено</span></a>
 												</div>
-												<div class="price__button price__button_bg-color">
-													<a href="http://andreyfront.owlweb.com.ua/unb/enter.html"><span class="_icon-arrow">Увійти</span></a>
+												<div class="price__button">
+													<div class="price__tooltip tooltip">
+														<div class="tooltip__icon _icon-warning"></div>
+														<div class="tooltip__body">
+															<p>🔥Щоб підвищіти шанси на перемогу, вкажіть бажаний обсяг та запропонуйте свою ціну</p>
+														</div>
+													</div>
+													<a href="#callback-offer" class="_popup-link offer"><span class="_icon-arrow">Cвоя пропозиція</span><span class="_icon-chevron">Ставку зроблено</span>
+													</a>
 												</div>
 											</div>
 										</div>
-										<div class="price__message">
-											<p>🔥Тільки зареєстровані та авторизовані користувачі можуть приймати участь в аукціонах</p>
+										<div class="price__message price__message_display">
+											<p>🔥Ви також можете запрпонувати свою ціну, щоб підвищити шанси на перемогу!</p>
 										</div>
 									</div>
+									<!-- История ставок таблица -->
+									<div class="auction__bets bets">
+										<div class="bets__caption">Ваші попередні ставки</div>
+										<div class="bets__table table-bets">
+											<div class="table-bets__summ">
+												<div class="table-bets__row">
+													<div class="table-bets__item">Всього:</div>
+													<div class="table-bets__item"><span>Ціна (грн)</span>..</div>
+													<div class="table-bets__item"><span>Кіль-ть (тони)</span>11 000</div>
+													<div class="table-bets__item"><span>Вартість (грн)s</span>43 400 000,00</div>
+												</div>
+											</div>
+											<div class="table-bets__head">
+												<div class="table-bets__row">
+													<div class="table-bets__item">Час та дата</div>
+													<div class="table-bets__item">Ціна (грн)</div>
+													<div class="table-bets__item">Кіль-ть (тони)</div>
+													<div class="table-bets__item">Вартість (грн)</div>
+												</div>
+											</div>
+											<div class="table-bets__body">
+												<div class="table-bets__row new--bet">
+													<div class="table-bets__item"><span>Час та дата</span>22.02.2023 14:38:02</div>
+													<div class="table-bets__item"><span>Ціна (грн)</span>40 000, 00</div>
+													<div class="table-bets__item"><span>Кіль-ть (тони)</span>200</div>
+													<div class="table-bets__item"><span>Вартість (грн)s</span>8 000 000,00</div>
+													<span class="message-bets">🔥Нова</span>
+												</div>
+												<div class="table-bets__row">
+													<div class="table-bets__item"><span>Час та дата</span>22.02.2023 14:38:02</div>
+													<div class="table-bets__item"><span>Ціна (грн)</span>40 000, 00</div>
+													<div class="table-bets__item"><span>Кіль-ть (тони)</span>200</div>
+													<div class="table-bets__item"><span>Вартість (грн)s</span>8 000 000,00</div>
+												</div>
+												<div class="table-bets__row">
+													<div class="table-bets__item"><span>Час та дата</span>22.02.2023 14:38:02</div>
+													<div class="table-bets__item"><span>Ціна (грн)</span>40 000, 00</div>
+													<div class="table-bets__item"><span>Кіль-ть (тони)</span>200</div>
+													<div class="table-bets__item"><span>Вартість (грн)s</span>8 000 000,00</div>
+												</div>
+												<div class="table-bets__row">
+													<div class="table-bets__item"><span>Час та дата</span>22.02.2023 14:38:02</div>
+													<div class="table-bets__item"><span>Ціна (грн)</span>40 000, 00</div>
+													<div class="table-bets__item"><span>Кіль-ть (тони)</span>200</div>
+													<div class="table-bets__item"><span>Вартість (грн)s</span>8 000 000,00</div>
+												</div>
+												<div class="table-bets__row bet--finish">
+													<div class="table-bets__item"><span>Час та дата</span>22.02.2023 14:38:02</div>
+													<div class="table-bets__item"><span>Ціна (грн)</span>40 000, 00</div>
+													<div class="table-bets__item"><span>Кіль-ть (тони)</span>200</div>
+													<div class="table-bets__item"><span>Вартість (грн)s</span>8 000 000,00</div>
+													<span class="message-bets">☝Ваша остаточна ставка</span>
+												</div>
+												<div class="table-bets__row">
+													<div class="table-bets__item"><span>Час та дата</span>22.02.2023 14:38:02</div>
+													<div class="table-bets__item"><span>Ціна (грн)</span>40 000, 00</div>
+													<div class="table-bets__item"><span>Кіль-ть (тони)</span>200</div>
+													<div class="table-bets__item"><span>Вартість (грн)s</span>8 000 000,00</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- История ставок таблица -->
 									<div class="links">
 	<a href="#" class="links__link _icon-arrow">Магазин</a>
 	<a href="#" class="links__link _icon-arrow">Правила аукціонів</a>

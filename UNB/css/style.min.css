@@ -954,6 +954,75 @@ input[type=password] {
   display: block;
 }
 
+.checkbox {
+  position: relative;
+  cursor: pointer;
+}
+@media (any-hover: hover) {
+  .checkbox:hover .checkbox__box {
+    background-color: #D3E8FF;
+  }
+  .checkbox:hover .checkbox__box::before {
+    border-color: #0E273D;
+  }
+  .checkbox:hover .checkbox__icon {
+    color: #F0F7FF;
+  }
+}
+.checkbox__input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+.checkbox__input:checked + .checkbox__wrap .checkbox__box::before {
+  background-color: #0E273D;
+  border-color: #0E273D;
+}
+.checkbox__input:checked + .checkbox__wrap .checkbox__icon {
+  opacity: 1;
+}
+.checkbox__wrap {
+  display: inline-flex;
+  align-items: center;
+}
+.checkbox__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease 0s, color 0.3s ease 0s;
+  font-size: 18px;
+  color: #E3F1FF;
+}
+.checkbox__text {
+  line-height: 120%;
+}
+.checkbox__box {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  flex: 0 0 38px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease 0s;
+}
+.checkbox__box::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #5E7488;
+  border-radius: 3px;
+  transform: translate(-50%, -50%);
+  transition: border-color 0.3s ease 0s, background-color 0.3s ease 0s;
+}
+
 .form.form-write {
   max-width: 600px;
 }
@@ -2589,6 +2658,14 @@ body.ie ._ibg img {
     position: static;
   }
 }
+.tooltip_white .tooltip__body {
+  background-color: #FFFFFF;
+  width: 338px;
+  font-size: 14px;
+}
+.tooltip_white .tooltip__body::before {
+  border-bottom-color: #FFFFFF;
+}
 .tooltip.darck .tooltip__body {
   background-color: #0B1F31;
   color: #F0F7FF;
@@ -2620,7 +2697,7 @@ body.ie ._ibg img {
     pointer-events: auto;
   }
   .tooltip:hover .tooltip__body_position {
-    top: 40px;
+    top: 30px;
   }
 }
 @media (max-width: 768px) {
@@ -2936,7 +3013,6 @@ body.ie ._ibg img {
 }
 .form-popup__calck {
   padding: 15px 30px 0px 30px;
-  margin: 0px 0px 50px 0px;
   font-weight: 500;
   font-size: 13px;
   line-height: 110%;
@@ -2945,6 +3021,28 @@ body.ie ._ibg img {
 .form-popup__wrap {
   padding: 20px 0px 0px 0px;
   text-align: right;
+}
+.form-popup__row {
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  margin: 40px 0px 0px 0px;
+}
+.form-popup__row .tooltip_position {
+  margin: 0px 0px 4px 5px;
+}
+.form-popup__message {
+  font-size: 15px;
+  line-height: 125%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #D3E8FF;
+  margin-top: 3px;
+  margin: 0 30px;
+  display: none;
+}
+.form-popup__message.active {
+  display: block;
 }
 .form-popup__btn {
   padding: 21.5px 0px;
@@ -2959,6 +3057,7 @@ body.ie ._ibg img {
   border-radius: 0px 0px 19px 19px;
   border-top: 1px solid #FFFFFF;
   transition: background-color 0.3s ease-in-out 0s;
+  margin: 50px 0px 0px 0px;
 }
 @media (any-hover: hover) {
   .form-popup__btn:hover {
@@ -6105,6 +6204,11 @@ body.ie ._ibg img {
   flex: 0 1 700px;
   margin: 0px 100px 0px 0px;
 }
+@media (max-width: 1200px) {
+  .auction-user__left {
+    margin: 0px 50px 0px 0px;
+  }
+}
 @media (max-width: 1024px) {
   .auction-user__left {
     margin: 0px 0px 50px 0px;
@@ -6281,7 +6385,7 @@ body.ie ._ibg img {
 }
 .price__button a._disabled {
   cursor: auto;
-  background-color: #E3F1FF;
+  background-color: #CDF5D9;
   pointer-events: none;
 }
 .price__button a._disabled span._icon-chevron {
@@ -6497,6 +6601,204 @@ body.ie ._ibg img {
 }
 .info__button._active span:first-child {
   display: none;
+}
+.bets {
+  margin: 0px 0px 100px 0px;
+}
+@media (max-width: 1024px) {
+  .bets {
+    margin: 0px 0px 80px 0px;
+  }
+}
+.bets__caption {
+  line-height: 120%;
+  margin: 0px 0px 13px 0px;
+  padding: 0px 0px 0px 20px;
+}
+.table-bets {
+  background: #F6FAFF;
+  border: 2px solid #D3E8FF;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 20px;
+}
+.table-bets__summ {
+  border-bottom: 1px solid #D3E8FF;
+}
+.table-bets__summ .table-bets__item {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 120%;
+}
+@media (max-width: 640px) {
+  .table-bets__summ .table-bets__item {
+    font-size: 18px;
+  }
+  .table-bets__summ .table-bets__item:first-child {
+    font-size: 14px;
+    flex: 1 1 auto;
+  }
+}
+.table-bets__row {
+  display: grid;
+  grid-template-columns: 1fr repeat(3, minmax(min-content, 110px));
+  gap: 0 30px;
+}
+@media (max-width: 640px) {
+  .table-bets__row {
+    display: block;
+    padding: 20px 0;
+    border-bottom: 1px solid #D3E8FF;
+  }
+}
+.table-bets__row.new--bet {
+  background-color: #F0F7FF;
+  position: relative;
+}
+.table-bets__row.new--bet .message-bets {
+  display: block;
+}
+.table-bets__row.bet--finish {
+  position: relative;
+  padding: 5px 0;
+}
+.table-bets__row.bet--finish::before {
+  content: "";
+  background-color: #CDF5D9;
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 10px);
+  z-index: 0;
+  border-radius: 6px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media (max-width: 640px) {
+  .table-bets__row.bet--finish::before {
+    height: calc(100% - 20px);
+  }
+}
+.table-bets__row.bet--finish .table-bets__item {
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 640px) {
+  .table-bets__row.bet--finish .table-bets__item {
+    padding: 0 10px;
+  }
+}
+.table-bets__row.bet--finish .table-bets__item:first-child {
+  padding-left: 10px;
+}
+@media (max-width: 640px) {
+  .table-bets__row.bet--finish .table-bets__item:first-child {
+    padding-top: 20px;
+  }
+}
+.table-bets__row.bet--finish .table-bets__item:last-of-type {
+  padding-right: 10px;
+}
+@media (max-width: 640px) {
+  .table-bets__row.bet--finish .table-bets__item:last-of-type {
+    padding-bottom: 20px;
+  }
+}
+.table-bets__row.bet--finish .message-bets {
+  display: block;
+  top: 0;
+}
+.table-bets__row.info {
+  border: none;
+  padding: 0;
+}
+.table-bets__row:not(:last-child) {
+  border-bottom: 1px solid #D3E8FF;
+}
+.table-bets__item {
+  padding: 10px 0;
+  font-size: 14px;
+}
+@media (max-width: 640px) {
+  .table-bets__item {
+    display: flex;
+    font-size: 18px;
+    align-items: center;
+    padding: 0;
+  }
+  .table-bets__item:not(:last-child) {
+    margin: 0px 0px 10px 0px;
+  }
+  .table-bets__item:last-of-type {
+    margin: 0px 0px 0px 0px;
+  }
+}
+.table-bets__item:not(:first-child) {
+  text-align: right;
+}
+@media (max-width: 640px) {
+  .table-bets__item:not(:first-child) {
+    text-align: left;
+  }
+}
+.table-bets__item span {
+  display: none;
+}
+@media (max-width: 640px) {
+  .table-bets__item span {
+    display: block;
+    font-size: 14px;
+    flex: 0 0 115px;
+    margin: 0px 10px 0px 0px;
+  }
+}
+.table-bets__head {
+  border-bottom: 1px solid #D3E8FF;
+}
+.table-bets__head.non--border {
+  border: none;
+}
+@media (max-width: 640px) {
+  .table-bets__head {
+    display: none;
+  }
+}
+.table-bets__head .table-bets__item {
+  color: #5E7488;
+  padding: 15px 0;
+}
+.table-bets__dasboard-info {
+  grid-column: 1/5;
+  line-height: 140%;
+  text-align: center;
+  padding: 20px;
+}
+.table-bets .message-bets {
+  position: absolute;
+  font-size: 12px;
+  line-height: 100%;
+  color: #FFFFFF;
+  padding: 1px 7px 3px 2px;
+  background-color: #60A4F1;
+  border-radius: 35px;
+  right: -3px;
+  top: -4px;
+  transform: translateY(-50%);
+  display: none;
+}
+@media (max-width: 640px) {
+  .table-bets .message-bets {
+    right: 0;
+  }
+}
+.table-bets .message-bets::before {
+  content: "";
+  border: 8px solid transparent;
+  border-top: 8px solid #60A4F1;
+  transform: translateX(-50%);
+  position: absolute;
+  bottom: -12px;
+  right: -5px;
 }
 
 .page__reg-enter {

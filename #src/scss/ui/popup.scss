@@ -322,7 +322,6 @@
 
 	&__calck {
 		padding: 15px 30px 0px 30px;
-		margin: 0px 0px 50px 0px;
 		font-weight: 500;
 		font-size: 13px;
 		line-height: 110%;
@@ -333,6 +332,34 @@
 	&__wrap {
 		padding: 20px 0px 0px 0px;
 		text-align: right;
+	}
+
+	// .form-popup__row
+	&__row {
+		padding: 0 30px;
+		display: flex;
+		align-items: center;
+		margin: 40px 0px 0px 0px;
+
+		.tooltip_position {
+			margin: 0px 0px 4px 5px;
+		}
+	}
+
+	// .form-popup___message
+	&__message {
+		font-size: 15px;
+		line-height: 125%;
+		padding: 10px;
+		border-radius: 10px;
+		background-color: $bg-2;
+		margin-top: 3px;
+		margin: 0 30px;
+		display: none;
+
+		&.active {
+			display: block;
+		}
 	}
 
 	// .form-popup__btn
@@ -350,6 +377,7 @@
 		border-radius: 0px 0px 19px 19px;
 		border-top: 1px solid $white;
 		transition: background-color 0.3s ease-in-out 0s;
+		margin: 50px 0px 0px 0px;
 
 		@media (any-hover:hover) {
 			&:hover {

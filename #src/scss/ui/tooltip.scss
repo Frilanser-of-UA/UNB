@@ -23,6 +23,18 @@
 		}
 	}
 
+	&_white {
+		.tooltip__body {
+			background-color: $white;
+			width: 338px;
+			font-size: 14px;
+
+			&::before {
+				border-bottom-color: $white;
+			}
+		}
+	}
+
 	&.darck {
 		.tooltip__body {
 			background-color: $bg-dark;
@@ -57,7 +69,7 @@
 				pointer-events: auto;
 
 				&_position {
-					top: 40px;
+					top: 30px;
 				}
 			}
 		}

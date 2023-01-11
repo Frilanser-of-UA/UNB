@@ -16,6 +16,10 @@
 		flex: 0 1 700px;
 		margin: 0px 100px 0px 0px;
 
+		@media (max-width:($md1+px)) {
+			margin: 0px 50px 0px 0px;
+		}
+
 		@media (max-width:($md2+px)) {
 			margin: 0px 0px 50px 0px;
 		}
@@ -274,7 +278,7 @@
 
 			&._disabled {
 				cursor: auto;
-				background-color: $bg-1;
+				background-color: $green-01;
 				pointer-events: none;
 
 				span {
@@ -570,6 +574,244 @@
 					display: none;
 				}
 			}
+		}
+	}
+
+	// .auction__bets
+
+	&__bets {}
+}
+
+.bets {
+	margin: 0px 0px 100px 0px;
+
+	@media (max-width:($md2+px)) {
+		margin: 0px 0px 80px 0px;
+	}
+
+	// .bets__caption
+
+	&__caption {
+		line-height: 120%;
+		margin: 0px 0px 13px 0px;
+		padding: 0px 0px 0px 20px;
+	}
+
+	// .bets__table
+
+	&__table {}
+}
+
+.table-bets {
+	background: $bg-00;
+	border: 2px solid $bg-2;
+	border-radius: 20px;
+	overflow: hidden;
+	padding: 20px;
+	// .table-bets__summ
+
+	&__summ {
+		.table-bets__item {
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 120%;
+
+			@media (max-width:($md4+px)) {
+				font-size: 18px;
+
+				&:first-child {
+					font-size: 14px;
+					flex: 1 1 auto;
+				}
+			}
+		}
+
+		border-bottom: 1px solid $bg-2;
+	}
+
+	// .table-bets__row
+
+	&__row {
+		display: grid;
+		grid-template-columns: 1fr repeat(3, minmax(min-content, 110px));
+		gap: 0 30px;
+
+		@media (max-width:($md4+px)) {
+			display: block;
+			padding: 20px 0;
+			border-bottom: 1px solid $bg-2;
+		}
+
+		&.new--bet {
+			background-color: $bg-0;
+			position: relative;
+
+			.message-bets {
+				display: block;
+			}
+		}
+
+		&.bet--finish {
+			position: relative;
+			padding: 5px 0;
+
+			&::before {
+				content: '';
+				background-color: $green-01;
+				position: absolute;
+				width: 100%;
+				height: calc(100% - 10px);
+				z-index: 0;
+				border-radius: 6px;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+
+				@media (max-width:($md4+px)) {
+					height: calc(100% - 20px);
+				}
+			}
+
+			.table-bets__item {
+				position: relative;
+				z-index: 1;
+
+				@media (max-width:($md4+px)) {
+					padding: 0 10px;
+				}
+
+				&:first-child {
+					padding-left: 10px;
+
+					@media (max-width:($md4+px)) {
+						padding-top: 20px;
+					}
+				}
+
+				&:last-of-type {
+					padding-right: 10px;
+
+					@media (max-width:($md4+px)) {
+						padding-bottom: 20px;
+					}
+				}
+
+			}
+
+			.message-bets {
+				display: block;
+				top: 0;
+			}
+		}
+
+		&.info {
+			border: none;
+			padding: 0;
+		}
+
+		&:not(:last-child) {
+			border-bottom: 1px solid $bg-2;
+		}
+	}
+
+	// .table-bets__item
+
+	&__item {
+		padding: 10px 0;
+		font-size: 14px;
+
+		@media (max-width:($md4+px)) {
+			display: flex;
+			font-size: 18px;
+			align-items: center;
+			padding: 0;
+
+			&:not(:last-child) {
+				margin: 0px 0px 10px 0px;
+			}
+
+			&:last-of-type {
+				margin: 0px 0px 0px 0px;
+			}
+		}
+
+		&:not(:first-child) {
+			text-align: right;
+
+			@media (max-width:($md4+px)) {
+				text-align: left;
+			}
+		}
+
+		span {
+			display: none;
+
+			@media (max-width:($md4+px)) {
+				display: block;
+				font-size: 14px;
+				flex: 0 0 115px;
+				margin: 0px 10px 0px 0px;
+			}
+		}
+	}
+
+	// .table-bets__head
+
+	&__head {
+		border-bottom: 1px solid $bg-2;
+
+		&.non--border {
+			border: none;
+		}
+
+		@media (max-width:($md4+px)) {
+			display: none;
+		}
+
+		.table-bets__item {
+			color: $gray-03;
+			padding: 15px 0;
+		}
+	}
+
+	// .table-bets__body
+
+	&__body {}
+
+	// .table-bets__dasboard-info
+
+	&__dasboard-info {
+		grid-column: 1/5;
+		line-height: 140%;
+		text-align: center;
+		padding: 20px;
+	}
+
+	.message-bets {
+		position: absolute;
+		font-size: 12px;
+		line-height: 100%;
+		color: $white;
+		padding: 1px 7px 3px 2px;
+		background-color: $bg-7;
+		border-radius: 35px;
+		right: -3px;
+		top: -4px;
+		transform: translateY(-50%);
+		display: none;
+
+		@media (max-width:($md4+px)) {
+			right: 0;
+		}
+
+		&::before {
+			content: "";
+			border: 8px solid transparent;
+			border-top: 8px solid $bg-7;
+			transform: translateX(-50%);
+			position: absolute;
+			bottom: -12px;
+			right: -5px;
 		}
 	}
 }
